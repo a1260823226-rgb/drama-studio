@@ -35,7 +35,7 @@ Not a prompt collection — a stateful, verifiable, repairable production line. 
 
 | You are | Open first |
 |---|---|
-| New here | This page → [Quick start](#one-minute-quick-start) → the complete `examples/青叶大学-*` sample |
+| New here | This page → [Quick start](#one-minute-quick-start) → the complete `examples/三打白骨精-*` sample |
 | Agent integrator | [`SKILL.md`](SKILL.md) (Chinese) / [`SKILL.en.md`](SKILL.en.md) (English) — the three-stage workflow and command reference |
 | Changing slicing rules | [`references/stage-2-storyboard.md`](references/stage-2-storyboard.md) — the six slicing laws + shot language |
 | Changing asset output | [`references/stage-1-assets.md`](references/stage-1-assets.md) — character four-views, layered scene objects |
@@ -88,7 +88,7 @@ python scripts/drama_studio.py validate-storyboard project-storyboard.json --sce
 python scripts/drama_studio.py compile-slices project-storyboard.json --assets project-assets.json --scenes project-scenes.json --out project-slices.md
 ```
 
-`examples/青叶大学-*` is a complete worked sample (script → assets → 5 slices → slices.md → report). Copying from it is the fastest way in.
+`examples/三打白骨精-*` is a complete worked sample (script → assets → 14 slices → slices.md → report). Copying from it is the fastest way in.
 
 ## A compiled slice looks like this
 
@@ -147,7 +147,7 @@ drama-studio/
 │       ├── scene-extract.md          Scene extraction prompt (art director) + plate style
 │       ├── asset-intake.md           Asset registry (field dictionary + workflow)
 │       └── production-brief.md       Production brief
-└── examples/                    Complete Aobaga University sample (doubles as the self-test fixture)
+└── examples/                    Complete White Bone Demon sample (doubles as the self-test fixture)
 ```
 
 > Language convention: slice prompts, extraction prompts, and sample data stay Chinese-native (that is their working language); documentation ships bilingual — English is the default display (`README.md`, `SKILL.en.md`, `references/en/`), with Chinese at `README.zh.md`, `SKILL.md`, and `references/`. The self-test checks that the mirrors are complete.

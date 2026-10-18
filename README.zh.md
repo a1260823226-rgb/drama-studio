@@ -35,7 +35,7 @@ Updated: **2026-10-18** · **v1.0.0** · 仓库默认展示为英文（[`README.
 
 | 你是谁 | 先打开 |
 |---|---|
-| 第一次接触 | 本页 → [一分钟上手](#一分钟上手) → `examples/青叶大学-*` 整套样例 |
+| 第一次接触 | 本页 → [一分钟上手](#一分钟上手) → `examples/三打白骨精-*` 整套样例 |
 | Agent 集成者 | [`SKILL.md`](SKILL.md)（中文）/ [`SKILL.en.md`](SKILL.en.md)（英文）——三阶段工作流与命令速查 |
 | 要改切分规则 | [`references/stage-2-storyboard.md`](references/stage-2-storyboard.md)——六条切分律 + 镜头语言 |
 | 要改资产产出 | [`references/stage-1-assets.md`](references/stage-1-assets.md)——人物四视图、场景分层物件 |
@@ -88,7 +88,7 @@ python scripts/drama_studio.py validate-storyboard 项目-storyboard.json --scen
 python scripts/drama_studio.py compile-slices 项目-storyboard.json --assets 项目-assets.json --scenes 项目-scenes.json --out 项目-slices.md
 ```
 
-`examples/青叶大学-*` 是一整套跑通的样例（剧本 → 资产 → 5 个切片 → slices.md → 报告），从那儿抄最快。
+`examples/三打白骨精-*` 是一整套跑通的样例（剧本 → 资产 → 14 个切片 → slices.md → 报告），从那儿抄最快。
 
 ## 样例切片长这样
 
@@ -145,7 +145,7 @@ drama-studio/
 │       ├── scene-extract.md          场景提取提示词（美术指导）+ 空镜写法
 │       ├── asset-intake.md           资产登记单（字段字典 + 流程）
 │       └── production-brief.md       生产简报
-└── examples/                   青叶大学整套样例（同时是自测夹具）
+└── examples/                   三打白骨精整套样例（同时是自测夹具）
 ```
 
 > 语言约定：切片 Prompt、提取提示词、示例数据保持中文原生（它们的工作语言就是中文）；文档层双语——仓库默认展示英文（`README.md` / `SKILL.en.md` / `references/en/`），中文在 `README.zh.md` / `SKILL.md` / `references/`，自测会检查镜像缺失。
