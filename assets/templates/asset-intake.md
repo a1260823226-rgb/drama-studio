@@ -42,7 +42,7 @@
 | `states[]` | 状态机：数量/位置/朝向/开合/完好/干湿/文字图层 |
 | `carriedBy` / `relatedScenes` | 谁带着、在哪几场出现 |
 
-> 场景内静态物件进 `scenes[].objects`；**跨场景流转、有状态变化**的叙事道具才建道具卡（如凛生的冰袋：fresh → melting）。
+> 场景内静态物件进 `scenes[].objects`；**跨场景流转、有状态变化**的叙事道具才建道具卡（如青砂罐：sealed → open → rotten）。
 
 ## 登记流程
 

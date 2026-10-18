@@ -17,7 +17,7 @@ Feed the script to the "veteran film stylist" prompt; each on-screen character y
 1. **Face and appearance**: age/gender/identity → height and build → face and features → skin → hair, down to drawable, checkable detail.
 2. **Costume**: cut and form → fabric → palette → trims and accessories → signs of wear; form comes first (mid-prompt detail gets lost in translation).
 
-Iron rules: **never write the character's name** (the four-view shape identifies the person, not the name); every character gets at least one **recognition anchor** (Rinsheng's knee ice pack, Takashi's wristwatch).
+Iron rules: **never write the character's name** (the four-view shape identifies the person, not the name); every character gets at least one **recognition anchor** (Sun Wukong's headband, Tang Sanzang's nine-ringed staff).
 
 ### Assembly (build-sheets)
 
@@ -48,25 +48,27 @@ After generating, set `images[].status` to `linked`; after frame-checking, `acce
 
 Feed the script to the "film art director" prompt to produce a **layered object list**:
 
-| Level | Definition | Example (therapy room) |
+| Level | Definition | Example (rocky slope) |
 |---|---|---|
-| Core | Explicitly mentioned, forms the scene's subject | therapy bed, medical cart, frosted glass door |
-| Environment | Builds background and atmosphere | lockers, chairs, anti-slip flooring, fluorescent lights |
-| Implied | Unstated but logically inevitable | ice pack, white bedsheet, medical posters |
+| Core | Explicitly mentioned, forms the scene's subject | grey-white boulders, flat stone at the slope mouth, clay jar and green porcelain bottle |
+| Environment | Builds background and atmosphere | half-dispersed fog, dry grass and gravel, shallow gully between boulders |
+| Implied | Unstated but logically inevitable | leftover offerings, burlap seal on the jar's mouth |
 
-**Implied objects are the root of continuity**: the script never mentions the ice pack, but a therapy room logically has one — leave it unregistered, and the model improvises a different one every generation, and cross-slice drift is guaranteed. If scenes must connect, objects must be stated by necessity and priority.
+**Implied objects are the root of continuity**: the script only says "carrying the jar to deliver a meal", but the jar, its seal, and the leftovers logically exist — leave them unregistered, and the model improvises a different one every generation, and cross-slice drift is guaranteed. If scenes must connect, objects must be stated by necessity and priority.
 
 ### Assembling the plate prompt
 
 `sheetPrompt` is written by the agent as a **plate description** from the object list + atmosphere summary, laid out in spatial order:
 
 ```text
-专业运动冰场理疗室空镜，冷调压抑的医疗康复空间，无人场景。画面中央一张专业运动理疗床，软垫床面。可调节靠背微微抬起，白色浅蓝床品，金属框架，床面留有使用痕迹。画面右侧为门。
-
-床侧不锈钢医疗推车与托盘，摆放白色绷带卷、药棉盒、运动胶带、备用冰袋，排列整齐。墙边一排灰白色铁皮储物柜，柜门排列。靠墙简单金属塑料椅，浅色。理疗室地面浅色防滑地胶，干净冷调，墙面浅色整洁，贴有医疗海报或运动队标志，无地毯、无地垫、无 rugs。顶部日光灯冷白均匀照明，略带医院感。地面、墙面、天花板、进深、角落陈设清晰，空间感强。镜头中景广角，略高视角，构图平稳，写实影视剧照质感，冷色系，高对比光影，简洁克制，电影级画质，超高清，细节丰富。画面中不出现任何可读文字、数字、标语、品牌名、标签或说明字样。
+东方神话写实电影风格，荒山乱石坡空镜，无人场景。画面中景是一组灰白巨石，表面被雨水冲出浅沟……
+巨石前一块半人高的平顶石，石上放着一只粗陶青砂罐与一只釉色发暗的绿磁瓶，罐口蒙着麻布……
+石群之间是一道半人深的浅沟……坡面枯草成簇，碎石遍布……远处浓雾被日光顶开一半……
+偏冷的中性日光从右上方斜下，白石反光晃眼，泥地显脏……镜头中景广角，平视略低，巨石压住画面右侧三分之一……
+写实影视剧照质感，电影级画质。画面中不出现任何可读文字、数字、标语、品牌名、标签或说明字样。
 ```
 
-Six rules of thumb: ① plate means no people, no hands; ② spatial order — center → right → bedside → wall → floor → ceiling; ③ concrete material/color/form (matte quick-dry, pale blue bedding, metal frame); ④ state lighting and camera position; ⑤ **close with the no-readable-text clause** (checked by the `scene-no-text` gate; text is a post-production overlay); ⑥ for time-of-day/lighting variants, re-generate with a new `atmosphere` and `sheetPrompt`, UUID unchanged.
+Six rules of thumb: ① plate means no people, no hands; ② spatial order — midground boulders → flat stone → gully → slope → distance; ③ concrete material/color/form (coarse pottery, dull glaze, burlap seal); ④ state lighting and camera position; ⑤ **close with the no-readable-text clause** (checked by the `scene-no-text` gate; text is a post-production overlay); ⑥ for time-of-day/lighting variants, re-generate with a new `atmosphere` and `sheetPrompt`, UUID unchanged.
 
 ### Narrative props
 
@@ -88,6 +90,6 @@ Every speaking character locks `voice.timbre / pitch / pace / accent` (checked b
 ```bash
 python {baseDir}/scripts/drama_studio.py seed-assets <project>-scenes.json --out <project>-assets.json
 python {baseDir}/scripts/drama_studio.py build-sheets <project>-assets.json --apply
-python {baseDir}/scripts/drama_studio.py uuid-new Rinsheng Takashi Kaita
+python {baseDir}/scripts/drama_studio.py uuid-new 孙悟空 唐僧 猪八戒 沙僧 白骨精
 python {baseDir}/scripts/drama_studio.py validate-assets <project>-assets.json --scenes <project>-scenes.json
 ```

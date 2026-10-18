@@ -6,7 +6,7 @@ This skill's entry point is a **line-oriented scene script**. `parse-script` is 
 
 | Line | Syntax | Notes |
 |---|---|---|
-| Scene header | `scene-id location time int/ext` | Time and int/ext are optional: `3-2 青叶大学冰场理疗室 日 内`; the location may contain spaces (non-greedy up to the last time token) |
+| Scene header | `scene-id location time int/ext` | Time and int/ext are optional: `1-2 白虎岭乱石坡 日 外`; the location may contain spaces (non-greedy up to the last time token) |
 | Cast | `人物：name、name、name` | Separated by 、, comma, or space; must be the scene's first content line |
 | Action | `△action description` | May span multiple lines; `※` is equivalent |
 | Close-up | `特写：close-up content` | Becomes an action beat with `closeup: true` |
@@ -14,26 +14,26 @@ This skill's entry point is a **line-oriented scene script**. `parse-script` is 
 | Comment | starts with `#` | Skipped |
 
 ```text
-3-2 青叶大学冰场理疗室 日 内
-人物：凛生、拓真、开太
+1-2 白虎岭乱石坡 日 外
+人物：唐僧、猪八戒、沙僧、村姑
 
-△凛生坐在理疗床上，右腿做了专业固定，膝盖上敷着冰袋，无法随意活动。
-拓真（眼神充满占有欲）：听说裁判长前几天为难你了？
-凛生（冷漠）：不关你的事。
-特写：冰袋表面的水珠顺着凛生的指尖滑落。
+△雾散了一半，乱石坡下传来环佩声。一个青衣女子提着青砂罐、拎着绿磁瓶，从坡下一步步上来。
+猪八戒（眼睛发直）：女菩萨，青罐里提的是什么？
+村姑（福身一礼）：长老，这是给田中丈夫送的斋饭。
+特写：罐盖翻开，长蛆与蛤蟆从斋饭里涌出来。
 ```
 
 ## Parser output: scenes.json
 
 ```jsonc
 {
-  "title": "青叶大学", "lang": "zh", "source": "青叶大学-script.md",
+  "title": "三打白骨精", "lang": "zh", "source": "三打白骨精-script.md",
   "scenes": [{
-    "id": "3-2", "location": "青叶大学冰场理疗室", "time": "日", "intExt": "内",
-    "characters": ["凛生", "拓真", "开太"],
+    "id": "1-2", "location": "白虎岭乱石坡", "time": "日", "intExt": "外",
+    "characters": ["孙悟空", "唐僧", "猪八戒", "沙僧", "村姑"],
     "beats": [
-      { "no": 1, "type": "action", "text": "凛生坐在理疗床上……", "closeup": false },
-      { "no": 3, "type": "dialogue", "speaker": "拓真", "emotion": "眼神充满占有欲", "line": "听说裁判长前几天为难你了？" }
+      { "no": 1, "type": "action", "text": "雾散了一半，乱石坡下传来环佩声……", "closeup": false },
+      { "no": 2, "type": "dialogue", "speaker": "猪八戒", "emotion": "眼睛发直", "line": "女菩萨，青罐里提的是什么？" }
     ]
   }]
 }

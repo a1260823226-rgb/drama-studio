@@ -7,29 +7,28 @@ Slicing is creative work, but the six hard laws are all enforced by the 18 gates
 
 ```jsonc
 {
-  "id": "S01-02",                 // scene-seq: unique
-  "sceneId": "3-2",               // owning scene (one scene per slice group; a location change opens a new scene)
-  "title": "占有欲的试探",         // slice subtitle
+  "id": "S02-02",                 // scene-seq: unique
+  "sceneId": "1-2",               // owning scene (one scene per slice group; a location change opens a new scene)
+  "title": "编出来的家世",         // slice subtitle
   "seconds": 15,
   "cutPoint": "line-end",         // cut-point type at this slice's opening
   "size": "中近景",               // shot size, matched to the story (template four: medium/medium-close/close/full)
   "camera": "推镜",               // camera move: one primary action
-  "shotLanguage": "中近景侧机位缓推，浅景深锁定伤膝与冰袋，两人分置画面左右形成对峙构图，推至近景时切走。",
+  "shotLanguage": "中近景侧机位缓推，唐僧与女子隔平石对置，浅景深虚掉八戒的脸，推至罐口特写时切走。",
                                 // shot language: size tier / camera position / move / composition / edit relation — one line (≤80 chars)
-  "setting": "理疗室内日光灯顶光，两人隔床对峙",   // environmental setup (optional)
+  "setting": "平石两侧，日光落在石面上，罐子搁在八戒脚边",   // environmental setup (optional)
   "actionUnits": [                // 3-5 effective action units; meaningless micro-actions like blinks are dropped
-    "拓真俯身撑住床沿，目光落在凛生的伤膝上",
-    "凛生攥紧床单，指节发白",
-    "拓真伸手想碰冰袋，又在半空收回",
-    "凛生偏头避开视线，下巴埋进领口"
+    "唐僧眉心锁起，往前半步，把马缰绕在手上",
+    "女子垂眼答话，指尖绞住衣角，绞得指节发白",
+    "猪八戒抢过话头，一手掀开罐盖，热气腾起"
   ],
   "dialogue": [                   // dialogue verbatim from the script, not one byte changed
-    { "speaker": "拓真", "emotion": "眼神充满占有欲", "line": "听说裁判长前几天为难你了？" }
+    { "speaker": "唐僧", "emotion": "压低声", "line": "山深路险，怎好独自送饭？" }
   ],
-  "characters": ["凛生", "拓真"], // on-screen characters (by name; resolved to UUIDs at compile time)
-  "props": ["冰袋"],
-  "entryState": "拓真立于床前两步之外，房门已带上，凛生抬眼戒备",
-  "exitState": "拓真俯身撑着床沿，目光落在伤膝上，凛生攥紧床单偏头避开",
+  "characters": ["唐僧", "猪八戒", "沙僧", "村姑"], // on-screen characters (by name; resolved to UUIDs at compile time)
+  "props": ["青砂罐与绿磁瓶"],
+  "entryState": "女子站在平石前，青砂罐已到猪八戒手里，唐僧目光落在她的绣鞋上",
+  "exitState": "猪八戒揭开罐盖，热气腾起，唐僧合掌欲谢",
   "continuity": "chain",          // scene-start / chain / cut / reanchor
   "reanchorFrom": [],             // required when reanchor: ["C01","C02","S01"]
   "intense": false,               // intense confrontation: dialogue cap raised to 40
@@ -130,8 +129,8 @@ Principle: a good seam preserves at least two of — motion / direction / shape 
 `shotLanguage` is one line (≤80 chars) covering whichever layers apply: **size tier + camera position + move + composition + edit relation with adjacent shots**. Examples:
 
 ```text
-特写仰拍，拓真封住画面上缘形成压迫构图，凛生眼睫特写接冰袋水珠特写，交叉剪辑节奏加紧。
-大全景定场，平视固定机位，人物置于右下三分线，白床单作前景压住画幅，长镜头缓起，与切片2的中近景形成景别跳切。
+特写仰拍，岩壁横线压在画面上缘，指骨与石缝占满前景，绿瞳特写接整片山雾拉远，切成静默。
+大全景定场，平视固定机位，石阶作纵深引导线，人物占画面下三分之一，山雾压住上缘留白，长镜头缓起。
 ```
 
 - Land on executable terms (the `shot-language` gate checks presence and length; vague writing only earns a warning, but the warning must be heeded).

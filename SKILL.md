@@ -94,7 +94,7 @@ metadata:
 ```bash
 python {baseDir}/scripts/drama_studio.py parse-script <项目>-script.md --title <项目> --out <项目>-scenes.json
 python {baseDir}/scripts/drama_studio.py seed-assets <项目>-scenes.json --out <项目>-assets.json
-python {baseDir}/scripts/drama_studio.py uuid-new 凛生 拓真 开太        # 平台上还没有的资产，先生成 UUID
+python {baseDir}/scripts/drama_studio.py uuid-new 孙悟空 唐僧 猪八戒 沙僧 白骨精   # 平台上还没有的资产，先生成 UUID
 python {baseDir}/scripts/drama_studio.py validate-assets <项目>-assets.json --scenes <项目>-scenes.json
 ```
 
@@ -186,4 +186,4 @@ slug <名字>                                                  安全文件名
 python {baseDir}/scripts/selftest.py     # 104 项断言，不调模型不花额度，约 1 秒
 ```
 
-`examples/青叶大学-*` 是一整套跑通的样例（剧本 → scenes → assets → storyboard → slices → report），同时是自测夹具。改动脚本后先跑自测。
+`examples/三打白骨精-*` 是一整套跑通的样例（剧本 → scenes → assets → storyboard → slices → report），同时是自测夹具。改动脚本后先跑自测。

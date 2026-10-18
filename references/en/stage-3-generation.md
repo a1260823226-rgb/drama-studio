@@ -12,7 +12,7 @@ python {baseDir}/scripts/drama_studio.py compile-slices <project>-storyboard.jso
 Compilation is deterministic: the template header, field order, `@UUID` bindings, and verbatim dialogue blocks are all assembled by the script — **the model takes no part**.
 Compilation is refused while gates fail (`--force` overrides, for debugging only).
 
-Output structure (`examples/青叶大学-slices.md` is a complete sample):
+Output structure (`examples/三打白骨精-slices.md` is a complete sample):
 
 1. **Slicing notes**: cut logic, cut-point sequence, continuity sequence, per-slice dialogue character counts.
 2. **UUID table**: every character/scene used.
@@ -23,13 +23,14 @@ The anatomy of one slice prompt:
 
 ```text
 真实电影风格。无BGM。无字幕。风格要求真实，镜头切换自然。
-人物：@2e14540f-41ca-4feb-ac60-442348dc9fd3是凛生。@e57bf6bd-2fcd-4ca9-9f07-519faf7f8f65是拓真。
-场景：@bd657dad-a344-4fe2-99b5-4579e94f6678是理疗室。
-景别：中近景。
+人物：@a9cf0873-e937-4657-8eb0-a2d7dd2f77c2是孙悟空。@f44f5bb2-4cbf-468e-be1f-fe8ddca78d0d是唐僧。@fc55e7ef-0539-4d24-b8e6-63ab5f0f008c是猪八戒。@9ddcf00e-bfb0-480b-8b86-25e914befbbe是沙僧。
+场景：@3d1393e6-f6bd-4bac-8c7e-1c8a5ae6efb6是白虎岭古道。
+景别：中景。
 运镜：推镜。
-镜头语言：中近景侧机位缓推，浅景深锁定伤膝与冰袋，两人分置画面左右形成对峙构图，推至近景时切走。
-画面内容：理疗室内日光灯顶光，两人隔床对峙，拓真俯身撑住床沿，目光落在凛生的伤膝上；凛生攥紧床单，指节发白；拓真伸手想碰冰袋，又在半空收回；凛生偏头避开视线，下巴埋进领口。
-{拓真（眼神充满占有欲）：听说裁判长前几天为难你了，你可是滑联的宝贝，她到底是因为什么对你动怒的？}
+镜头语言：中景平视，机位略低于马背缓推，唐僧与猴王分置画面左右，马颈作前景压住下缘，收在云影没入雾中。
+画面内容：坡上停留处，唐僧扶鞍，悟空立于马侧，唐僧松开缰绳，按住腹部，抬眼看悟空；孙悟空收棒抱拳应命，转身一纵，脚踏云头翻过山脊；猪八戒把担子撂在地上，靠着石头坐下，沙僧持杖四望。
+{唐僧（气息虚弱）：悟空，为师腹中饥饿，你去南山摘些桃子来。}
+{孙悟空（抱拳）：师父稍等，弟子去去就回，八戒沙僧守好行李。}
 ```
 
 Compilation discipline:
