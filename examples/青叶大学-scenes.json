@@ -1,0 +1,106 @@
+{
+  "title": "青叶大学",
+  "lang": "zh",
+  "scenes": [
+    {
+      "id": "3-2",
+      "location": "青叶大学冰场理疗室",
+      "time": "日",
+      "intExt": "内",
+      "characters": [
+        "凛生",
+        "拓真",
+        "开太"
+      ],
+      "beats": [
+        {
+          "no": 1,
+          "type": "action",
+          "text": "凛生坐在理疗床上，右腿打了专业固定，膝盖上敷着冰袋，无法随意活动。她低着头，指尖反复划过冰袋表面的水珠。",
+          "closeup": false
+        },
+        {
+          "no": 2,
+          "type": "action",
+          "text": "房门被轻轻推开。看清来人是拓真后，凛生脸上的神情瞬间冷了下来，指尖也停了。",
+          "closeup": false
+        },
+        {
+          "no": 3,
+          "type": "dialogue",
+          "speaker": "拓真",
+          "emotion": "眼神充满占有欲",
+          "line": "听说裁判长前几天为难你了，你可是滑联的宝贝，她到底是因为什么对你动怒的？"
+        },
+        {
+          "no": 4,
+          "type": "dialogue",
+          "speaker": "凛生",
+          "emotion": "冷漠",
+          "line": "不关你的事。"
+        },
+        {
+          "no": 5,
+          "type": "action",
+          "text": "拓真反手关上房门，缓步逼近，皮鞋跟敲在地板上，一声一声。",
+          "closeup": false
+        },
+        {
+          "no": 6,
+          "type": "dialogue",
+          "speaker": "拓真",
+          "emotion": "笑容温和，眼神却冷",
+          "line": "裁判长也是为你好。等你拿了冠军，别忘了我一路为你铺的路。"
+        },
+        {
+          "no": 7,
+          "type": "dialogue",
+          "speaker": "凛生",
+          "emotion": "冷淡",
+          "line": "我的路，我自己滑。"
+        },
+        {
+          "no": 8,
+          "type": "dialogue",
+          "speaker": "拓真",
+          "emotion": "眼神阴鸷",
+          "line": "你教的那套早过时了。离开我，你什么都不是。"
+        },
+        {
+          "no": 9,
+          "type": "action",
+          "text": "房门突然被推开，开太探进半个身子，手里还抱着装备袋。",
+          "closeup": false
+        },
+        {
+          "no": 10,
+          "type": "dialogue",
+          "speaker": "开太",
+          "emotion": "探头",
+          "line": "拓真哥？教练正找你呢。"
+        },
+        {
+          "no": 11,
+          "type": "dialogue",
+          "speaker": "凛生",
+          "emotion": "冷淡",
+          "line": "开太，把门带上。"
+        },
+        {
+          "no": 12,
+          "type": "dialogue",
+          "speaker": "拓真",
+          "emotion": "瞬间换上笑容",
+          "line": "就说我在陪师姐复盘。乖，别扰我们。"
+        },
+        {
+          "no": 13,
+          "type": "action",
+          "text": "冰袋表面的水珠顺着凛生的指尖滑落，滴在床单上，洇开一小片深色。",
+          "closeup": true
+        }
+      ]
+    }
+  ],
+  "source": "青叶大学-script.md"
+}

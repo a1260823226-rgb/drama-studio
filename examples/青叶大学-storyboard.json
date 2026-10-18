@@ -1,0 +1,185 @@
+{
+  "title": "青叶大学",
+  "lang": "zh",
+  "aspectRatio": "9:16",
+  "params": {
+    "sliceSeconds": 15,
+    "minDialogueChars": 25,
+    "maxDialogueChars": 35,
+    "maxDialogueCharsIntense": 40,
+    "minActionUnits": 3,
+    "maxActionUnits": 5,
+    "maxChainDepth": 3,
+    "charsPerSecond": 4.5,
+    "actionSeconds": 2.5,
+    "durationTolerance": 0.3,
+    "fieldBrackets": false
+  },
+  "scenePlans": [
+    {
+      "sceneId": "3-2",
+      "location": "青叶大学冰场理疗室",
+      "time": "日",
+      "intExt": "内",
+      "cast": ["凛生", "拓真", "开太"],
+      "dialogueLines": 8,
+      "dialogueChars": 117,
+      "actionBeats": 5,
+      "estimateSeconds": 38.5,
+      "suggestSlices": 3
+    }
+  ],
+  "slices": [
+    {
+      "id": "S01-01",
+      "sceneId": "3-2",
+      "title": "冰袋与不速之客",
+      "seconds": 15,
+      "cutPoint": "scene-start",
+      "size": "中景",
+      "camera": "固定镜头",
+      "shotLanguage": "大全景定场，平视固定机位，人物置于右下三分线，白床单作前景压住画幅，长镜头缓起，与切片2的中近景形成景别跳切。",
+      "setting": "理疗室内白日灯顶光，白床单过曝一档，安静得能听见冰袋化水",
+      "actionUnits": [
+        "凛生坐在理疗床上，右腿打着专业固定，膝盖敷着冰袋，低头看水珠",
+        "房门被轻轻推开一条缝，走廊灯光切进一道白线",
+        "拓真探身看清屋内，缓步走入，皮鞋跟敲在地板上",
+        "凛生抬眼看清来人，神情瞬间冷了下来，指尖停在水珠上",
+        "拓真反手带上房门，立于床前两步之外"
+      ],
+      "dialogue": [],
+      "characters": ["凛生", "拓真"],
+      "props": ["冰袋"],
+      "entryState": "理疗室内，凛生独坐理疗床，右腿固定敷着冰袋，房门虚掩",
+      "exitState": "拓真立于床前两步之外，房门已带上，凛生抬眼戒备",
+      "continuity": "scene-start",
+      "status": "planned"
+    },
+    {
+      "id": "S01-02",
+      "sceneId": "3-2",
+      "title": "占有欲的试探",
+      "seconds": 15,
+      "cutPoint": "line-end",
+      "size": "中近景",
+      "camera": "推镜",
+      "shotLanguage": "中近景侧机位缓推，浅景深锁定伤膝与冰袋，两人分置画面左右形成对峙构图，推至近景时切走。",
+      "setting": "理疗室内日光灯顶光，两人隔床对峙",
+      "actionUnits": [
+        "拓真俯身撑住床沿，目光落在凛生的伤膝上",
+        "凛生攥紧床单，指节发白",
+        "拓真伸手想碰冰袋，又在半空收回",
+        "凛生偏头避开视线，下巴埋进领口"
+      ],
+      "dialogue": [
+        {
+          "speaker": "拓真",
+          "emotion": "眼神充满占有欲",
+          "line": "听说裁判长前几天为难你了，你可是滑联的宝贝，她到底是因为什么对你动怒的？"
+        }
+      ],
+      "characters": ["凛生", "拓真"],
+      "props": [],
+      "entryState": "拓真立于床前两步之外，房门已带上，凛生抬眼戒备",
+      "exitState": "拓真俯身撑着床沿，目光落在伤膝上，凛生攥紧床单偏头避开",
+      "continuity": "chain",
+      "status": "planned"
+    },
+    {
+      "id": "S01-03",
+      "sceneId": "3-2",
+      "title": "一句「不关你的事」",
+      "seconds": 15,
+      "cutPoint": "line-end",
+      "size": "中近景",
+      "camera": "横移",
+      "shotLanguage": "中近景横移，机位绕床尾四分之一弧，两人一坐一立构成前景后景层次，结尾停在半身景反打位。",
+      "setting": "理疗室内日光灯顶光，白床单垂到床沿",
+      "actionUnits": [
+        "凛生掀起眼皮，语气很淡地吐出四个字",
+        "拓真直起身，慢条斯理地整理袖口",
+        "拓真绕过床尾，挡住通往门口的去路",
+        "凛生撑着床沿向后挪了半寸，冰袋滑下一分"
+      ],
+      "dialogue": [
+        { "speaker": "凛生", "emotion": "冷漠", "line": "不关你的事。" },
+        {
+          "speaker": "拓真",
+          "emotion": "笑容温和，眼神却冷",
+          "line": "裁判长也是为你好。等你拿了冠军，别忘了我一路为你铺的路。"
+        }
+      ],
+      "characters": ["凛生", "拓真"],
+      "props": ["冰袋"],
+      "entryState": "拓真俯身撑着床沿，目光落在伤膝上，凛生攥紧床单偏头避开",
+      "exitState": "拓真绕到床尾挡住去路，凛生撑着床沿向后挪了半寸",
+      "continuity": "chain",
+      "status": "planned"
+    },
+    {
+      "id": "S01-04",
+      "sceneId": "3-2",
+      "title": "我的路我自己滑",
+      "seconds": 15,
+      "cutPoint": "line-end",
+      "size": "特写",
+      "camera": "推镜",
+      "shotLanguage": "特写仰拍，拓真封住画面上缘形成压迫构图，凛生眼睫特写接冰袋水珠特写，交叉剪辑节奏加紧。",
+      "setting": "理疗室内日光灯顶光，磨砂玻璃门透出走廊白光",
+      "actionUnits": [
+        "凛生抬起下巴，迎上拓真的目光",
+        "拓真俯身逼近，皮鞋跟一声声敲在地板上",
+        "拓真伸手撑上床柱，封住凛生的退路",
+        "凛生的膝盖悄悄向外侧挪了半寸，呼吸变浅"
+      ],
+      "dialogue": [
+        { "speaker": "凛生", "emotion": "冷淡", "line": "我的路，我自己滑。" },
+        {
+          "speaker": "拓真",
+          "emotion": "眼神阴鸷",
+          "line": "你教的那套早过时了。离开我，你什么都不是。"
+        }
+      ],
+      "characters": ["凛生", "拓真"],
+      "props": [],
+      "entryState": "理疗室内，拓真绕至床尾挡住去路，凛生撑床而坐，两人隔床相对",
+      "exitState": "拓真一手撑上床柱封住凛生退路，凛生膝盖外挪，室内空气紧绷",
+      "continuity": "reanchor",
+      "reanchorFrom": ["C01", "C02", "S01"],
+      "status": "planned"
+    },
+    {
+      "id": "S01-05",
+      "sceneId": "3-2",
+      "title": "门被推开的一秒",
+      "seconds": 15,
+      "cutPoint": "emotional-pause",
+      "size": "全景",
+      "camera": "跟拍",
+      "shotLanguage": "全景俯拍，房门入画切开画面，开太位于门框构成的画中画内，跟拍随视线转向床沿，落幅定格两人表情。",
+      "setting": "理疗室内日光灯顶光，白床单垂到床沿，门缝里透出一线走廊灯光",
+      "actionUnits": [
+        "房门突然被推开，开太探进半个身子，怀里抱着装备袋",
+        "凛生转头看向门口，紧绷的肩膀松了半分",
+        "拓真瞬间换上温和的笑容，退开半步",
+        "开太缩了缩脖子，却没退回走廊",
+        "冰袋表面的水珠顺着凛生的指尖滑落，滴在床单上洇开一小片深色"
+      ],
+      "dialogue": [
+        { "speaker": "开太", "emotion": "探头", "line": "拓真哥？教练正找你呢。" },
+        { "speaker": "凛生", "emotion": "冷淡", "line": "开太，把门带上。" },
+        {
+          "speaker": "拓真",
+          "emotion": "瞬间换上笑容",
+          "line": "就说我在陪师姐复盘。乖，别扰我们。"
+        }
+      ],
+      "characters": ["凛生", "拓真", "开太"],
+      "props": ["冰袋"],
+      "entryState": "拓真一手撑上床柱封住凛生退路，凛生膝盖外挪，室内空气紧绷",
+      "exitState": "房门半开，开太探进半个身子，拓真退开半步换上笑容，凛生转头看向门口",
+      "continuity": "chain",
+      "status": "planned"
+    }
+  ]
+}

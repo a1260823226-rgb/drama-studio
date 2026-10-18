@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>《青叶大学》分镜报告 · drama-studio</title>
+<style>
+body{font-family:system-ui,"PingFang SC","Microsoft YaHei",sans-serif;margin:2rem auto;max-width:960px;color:#1f2430;line-height:1.6}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:1rem 0}
+th,td{border:1px solid #d8dce3;padding:6px 10px;text-align:left;vertical-align:top}
+th{background:#f2f4f8} tr.ok td:first-child{color:#137333} tr.bad td{background:#fdecea}
+pre{background:#f6f7f9;padding:12px;overflow:auto;font-size:13px}
+h1{font-size:22px} h2{font-size:17px;margin-top:2rem}
+.warn{background:#fff7e0;border:1px solid #f0d488;padding:8px 14px;border-radius:6px}
+</style></head><body>
+<h1>《青叶大学》分镜报告</h1>
+<pre># 《青叶大学》分镜报告
+
+- 画幅：9:16 ｜ 切片：5 × 15s = 75s
+- 场面：1 ｜ 质量门：见下方清单
+
+## 场次计划
+
+| 场次 | 地点 | 人物 | 台词句/字 | 动作节拍 | 预估秒 | 建议切片 |
+|---|---|---|---|---|---|---|
+| 3-2 | 青叶大学冰场理疗室 | 凛生、拓真、开太 | 8 / 117 | 5 | 38.5 | 3 |
+
+## 切片清单
+
+| # | 切片 | 场次 | 标题 | 景别 | 运镜 | 断点 | 连续性 | 台词字 |
+|---|---|---|---|---|---|---|---|---|
+| 1 | S01-01 | 3-2 | 冰袋与不速之客 | 中景 | 固定镜头 | 场始 | scene-start | — |
+| 2 | S01-02 | 3-2 | 占有欲的试探 | 中近景 | 推镜 | 单句台词结束 | chain | 33 |
+| 3 | S01-03 | 3-2 | 一句「不关你的事」 | 中近景 | 横移 | 单句台词结束 | chain | 30 |
+| 4 | S01-04 | 3-2 | 我的路我自己滑 | 特写 | 推镜 | 单句台词结束 | reanchor | 25 |
+| 5 | S01-05 | 3-2 | 门被推开的一秒 | 全景 | 跟拍 | 情绪停顿 | chain | 29 |
+
+## 连续性链
+
+- 切片 1（S01-01）场始开镜｜链深度 1/3｜镜头语言：大全景定场，平视固定机位，人物置于右下三分线，白床单作前景压住画幅，长镜头缓起，与切片2的中近景形成景别跳切。
+- 切片 2（S01-02）链式衔接（上片尾帧即本片首帧）｜链深度 2/3｜镜头语言：中近景侧机位缓推，浅景深锁定伤膝与冰袋，两人分置画面左右形成对峙构图，推至近景时切走。
+- 切片 3（S01-03）链式衔接（上片尾帧即本片首帧）｜链深度 3/3｜镜头语言：中近景横移，机位绕床尾四分之一弧，两人一坐一立构成前景后景层次，结尾停在半身景反打位。
+- 切片 4（S01-04）重新锚定（从角色/场景母版开镜，重置链深度）｜链深度 1/3｜镜头语言：特写仰拍，拓真封住画面上缘形成压迫构图，凛生眼睫特写接冰袋水珠特写，交叉剪辑节奏加紧。
+- 切片 5（S01-05）链式衔接（上片尾帧即本片首帧）｜链深度 2/3｜镜头语言：全景俯拍，房门入画切开画面，开太位于门框构成的画中画内，跟拍随视线转向床沿，落幅定格两人表情。
+</pre>
+<h2>质量门</h2>
+<table><tr><th>✓✗</th><th>id</th><th>门禁</th><th>病灶</th></tr><tr class="ok"><td>✓</td><td>structure</td><td>切片清单非空且字段齐全</td><td>有切片缺 id/sceneId/title/size/camera/characters/entryState/exitState/continuity</td></tr><tr class="ok"><td>✓</td><td>slice-id</td><td>切片 id 唯一</td><td></td></tr><tr class="ok"><td>✓</td><td>slice-seconds</td><td>每个切片 15 秒</td><td></td></tr><tr class="ok"><td>✓</td><td>action-units</td><td>每切片 3-5 个有效动作单元</td><td></td></tr><tr class="ok"><td>✓</td><td>dialogue-chars</td><td>单切片台词 25-35 汉字（激烈对峙 ≤40）</td><td></td></tr><tr class="ok"><td>✓</td><td>cut-point</td><td>断点类型合法（单句台词结束/入场/离场/动作转折/情绪停顿）</td><td></td></tr><tr class="ok"><td>✓</td><td>no-delta</td><td>切片文本不带原始剧本 △/※ 标记</td><td></td></tr><tr class="ok"><td>✓</td><td>uuid-coverage</td><td>切片引用的人物/场景都能在资产册解析到 UUID</td><td></td></tr><tr class="ok"><td>✓</td><td>cast-match</td><td>切片人物不超出场次 cast</td><td></td></tr><tr class="ok"><td>✓</td><td>speaker-on-screen</td><td>台词说话人在本切片画内（或显式 VO）</td><td></td></tr><tr class="ok"><td>✓</td><td>size-camera</td><td>每个切片都写明景别与运镜</td><td></td></tr><tr class="ok"><td>✓</td><td>shot-language</td><td>每个切片都有一句镜头语言（景别/机位/运镜/构图/组接），≤80 字</td><td></td></tr><tr class="ok"><td>✓</td><td>continuity</td><td>连续性合法：chain 片上片尾帧相接；cut/reanchor 显式声明入场状态</td><td></td></tr><tr class="ok"><td>✓</td><td>scene-boundary</td><td>跨场不得链式衔接（场景边界从母版开镜）</td><td></td></tr><tr class="ok"><td>✓</td><td>reanchor-from</td><td>reanchor 切片必须列出重新锚定所用的资产</td><td></td></tr><tr class="ok"><td>✓</td><td>chain-depth</td><td>链式衔接深度 ≤ 3（超了必须 cut 或 reanchor）</td><td></td></tr><tr class="ok"><td>✓</td><td>dialogue-coverage</td><td>剧本台词逐字进入切片，不增不减不改（长台词可拆分，拼接须还原）</td><td></td></tr><tr class="ok"><td>✓</td><td>shot-variety</td><td>景别/运镜不复用一套（按剧情逐镜匹配）</td><td></td></tr></table>
+
+</body></html>

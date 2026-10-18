@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 本地配置与运行产物
+config.local.json
+.gates.jsonl
+_selftest_*
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
