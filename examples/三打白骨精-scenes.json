@@ -1,0 +1,540 @@
+{
+  "title": "三打白骨精",
+  "lang": "zh",
+  "scenes": [
+    {
+      "id": "1-1",
+      "location": "白虎岭古道",
+      "time": "日",
+      "intExt": "外",
+      "characters": [
+        "孙悟空",
+        "唐僧",
+        "猪八戒",
+        "沙僧",
+        "白骨精"
+      ],
+      "beats": [
+        {
+          "no": 1,
+          "type": "action",
+          "text": "山雾压着白虎岭的枯松，石阶一路向上。孙悟空扛着金箍棒走在最前，唐僧牵马居中，猪八戒挑着行李喘气，沙僧持降妖宝杖殿后。",
+          "closeup": false
+        },
+        {
+          "no": 2,
+          "type": "action",
+          "text": "唐僧勒住缰绳，按住腹部，脸色发白。",
+          "closeup": false
+        },
+        {
+          "no": 3,
+          "type": "dialogue",
+          "speaker": "唐僧",
+          "emotion": "气息虚弱",
+          "line": "悟空，为师腹中饥饿，你去南山摘些桃子来。"
+        },
+        {
+          "no": 4,
+          "type": "dialogue",
+          "speaker": "孙悟空",
+          "emotion": "抱拳",
+          "line": "师父稍等，弟子去去就回，八戒沙僧守好行李。"
+        },
+        {
+          "no": 5,
+          "type": "action",
+          "text": "孙悟空纵身踏云，一个筋斗翻过山脊，身影没入雾里。",
+          "closeup": false
+        },
+        {
+          "no": 6,
+          "type": "action",
+          "text": "猪八戒把担子往地上一撂，靠着石头坐下；沙僧持杖四望，眉头不展。",
+          "closeup": false
+        },
+        {
+          "no": 7,
+          "type": "action",
+          "text": "山脊后，白骨精半边身子贴在岩壁上，指骨抠进石缝。",
+          "closeup": false
+        },
+        {
+          "no": 8,
+          "type": "action",
+          "text": "她的眼窝里透出一点绿光，盯住坡下那匹白马。",
+          "closeup": false
+        },
+        {
+          "no": 9,
+          "type": "dialogue",
+          "speaker": "白骨精",
+          "emotion": "低声，指甲刮过岩石",
+          "line": "孙悟空走了，只剩这两个呆货看着行李，正好先变个皮囊试他一试。"
+        }
+      ]
+    },
+    {
+      "id": "1-2",
+      "location": "白虎岭乱石坡",
+      "time": "日",
+      "intExt": "外",
+      "characters": [
+        "孙悟空",
+        "唐僧",
+        "猪八戒",
+        "沙僧",
+        "村姑"
+      ],
+      "beats": [
+        {
+          "no": 1,
+          "type": "action",
+          "text": "雾散了一半，乱石坡下传来环佩声。一个青衣女子提着青砂罐、拎着绿磁瓶，从坡下一步步上来。",
+          "closeup": false
+        },
+        {
+          "no": 2,
+          "type": "dialogue",
+          "speaker": "猪八戒",
+          "emotion": "眼睛发直",
+          "line": "女菩萨，青罐里提的是什么？"
+        },
+        {
+          "no": 3,
+          "type": "dialogue",
+          "speaker": "村姑",
+          "emotion": "福身一礼",
+          "line": "长老，这是给田中丈夫送的斋饭。"
+        },
+        {
+          "no": 4,
+          "type": "action",
+          "text": "猪八戒放下钉耙，抹了把脸迎上去，替她接过罐子。",
+          "closeup": false
+        },
+        {
+          "no": 5,
+          "type": "action",
+          "text": "唐僧合掌，目光落在她脚上——绣鞋干净，鞋底没有半点泥。",
+          "closeup": false
+        },
+        {
+          "no": 6,
+          "type": "dialogue",
+          "speaker": "唐僧",
+          "emotion": "合掌",
+          "line": "女施主从何处来？"
+        },
+        {
+          "no": 7,
+          "type": "dialogue",
+          "speaker": "唐僧",
+          "emotion": "压低声",
+          "line": "山深路险，怎好独自送饭？"
+        },
+        {
+          "no": 8,
+          "type": "dialogue",
+          "speaker": "村姑",
+          "emotion": "垂眼",
+          "line": "就住山脚，父母在堂，丈夫田间劳作。"
+        },
+        {
+          "no": 9,
+          "type": "dialogue",
+          "speaker": "猪八戒",
+          "emotion": "抢话",
+          "line": "师父，人家一片好心，用斋吧。"
+        },
+        {
+          "no": 10,
+          "type": "action",
+          "text": "女子揭开罐盖，热气腾起；唐僧合掌欲谢。",
+          "closeup": false
+        },
+        {
+          "no": 11,
+          "type": "action",
+          "text": "天上一声风响，孙悟空拎着一枝桃子落在石上，金睛一缩。",
+          "closeup": false
+        },
+        {
+          "no": 12,
+          "type": "dialogue",
+          "speaker": "孙悟空",
+          "emotion": "厉声",
+          "line": "师父，那女子是妖精变的，莫吃她的饭！"
+        },
+        {
+          "no": 13,
+          "type": "dialogue",
+          "speaker": "村姑",
+          "emotion": "惊叫",
+          "line": "长老救我！"
+        },
+        {
+          "no": 14,
+          "type": "dialogue",
+          "speaker": "唐僧",
+          "emotion": "急喝",
+          "line": "悟空住手！莫要伤人！"
+        },
+        {
+          "no": 15,
+          "type": "action",
+          "text": "孙悟空不容分说，举棒照女子顶门打去。",
+          "closeup": false
+        },
+        {
+          "no": 16,
+          "type": "action",
+          "text": "女子身形一散，化作一缕白烟退到石后，原地只留一具青布衣裳的女尸。",
+          "closeup": false
+        },
+        {
+          "no": 17,
+          "type": "action",
+          "text": "唐僧踉跄后退，手指发抖。",
+          "closeup": false
+        },
+        {
+          "no": 18,
+          "type": "dialogue",
+          "speaker": "唐僧",
+          "emotion": "发抖",
+          "line": "你这泼猴，平白打死好人！"
+        },
+        {
+          "no": 19,
+          "type": "action",
+          "text": "猪八戒凑到唐僧耳边，压着嗓子说话。",
+          "closeup": false
+        },
+        {
+          "no": 20,
+          "type": "dialogue",
+          "speaker": "猪八戒",
+          "emotion": "撇嘴",
+          "line": "师父，他用障眼法哄你呢。"
+        },
+        {
+          "no": 21,
+          "type": "action",
+          "text": "唐僧盘膝坐下，闭眼念咒；孙悟空抱头翻滚，金箍勒进皮肉。",
+          "closeup": false
+        },
+        {
+          "no": 22,
+          "type": "dialogue",
+          "speaker": "孙悟空",
+          "emotion": "抱头",
+          "line": "师父莫念，那真是妖精！"
+        },
+        {
+          "no": 23,
+          "type": "action",
+          "text": "罐盖翻开，长蛆与蛤蟆从斋饭里涌出来，唐僧掩口后退。",
+          "closeup": true
+        }
+      ]
+    },
+    {
+      "id": "1-3",
+      "location": "白虎岭枯松下",
+      "time": "日",
+      "intExt": "外",
+      "characters": [
+        "孙悟空",
+        "唐僧",
+        "猪八戒",
+        "沙僧",
+        "老妪"
+      ],
+      "beats": [
+        {
+          "no": 1,
+          "type": "action",
+          "text": "枯松下传来哭声。一个白发老妪拄着竹杖，一步一颤地爬上坡来。",
+          "closeup": false
+        },
+        {
+          "no": 2,
+          "type": "dialogue",
+          "speaker": "老妪",
+          "emotion": "哭喊",
+          "line": "我的女儿啊，你往哪里去了？"
+        },
+        {
+          "no": 3,
+          "type": "dialogue",
+          "speaker": "猪八戒",
+          "emotion": "腿软",
+          "line": "师父，祸事了，那是死者的娘来了！"
+        },
+        {
+          "no": 4,
+          "type": "action",
+          "text": "唐僧扶着马鞍往前走了一步。",
+          "closeup": false
+        },
+        {
+          "no": 5,
+          "type": "dialogue",
+          "speaker": "唐僧",
+          "emotion": "脸色发白",
+          "line": "老人家，你女儿往哪边去了？"
+        },
+        {
+          "no": 6,
+          "type": "action",
+          "text": "老妪抬起脸，眼窝深陷，目光直直钉在唐僧身上。",
+          "closeup": false
+        },
+        {
+          "no": 7,
+          "type": "dialogue",
+          "speaker": "孙悟空",
+          "emotion": "冷笑",
+          "line": "八十老妇，岂能生十八之女？"
+        },
+        {
+          "no": 8,
+          "type": "dialogue",
+          "speaker": "老妪",
+          "emotion": "颤声",
+          "line": "长老，我女儿就死在这坡上。"
+        },
+        {
+          "no": 9,
+          "type": "dialogue",
+          "speaker": "孙悟空",
+          "emotion": "上前一步",
+          "line": "你且站住，让我看看你的脸。"
+        },
+        {
+          "no": 10,
+          "type": "action",
+          "text": "孙悟空鼻翼一动，眼底金光爆开；老妪袖口露出白骨色的长甲。",
+          "closeup": false
+        },
+        {
+          "no": 11,
+          "type": "action",
+          "text": "孙悟空挥棒再击，风声压过哭声。",
+          "closeup": false
+        },
+        {
+          "no": 12,
+          "type": "action",
+          "text": "老妪身子一软，元神化作白烟遁走，竹杖落地，坡上又留一具老妇尸身。",
+          "closeup": false
+        },
+        {
+          "no": 13,
+          "type": "action",
+          "text": "唐僧惊骇坠马，被沙僧扶住。",
+          "closeup": false
+        },
+        {
+          "no": 14,
+          "type": "action",
+          "text": "唐僧推开沙僧，盘坐念咒；孙悟空痛得满地翻滚，抓碎了身下石块。",
+          "closeup": false
+        },
+        {
+          "no": 15,
+          "type": "dialogue",
+          "speaker": "猪八戒",
+          "emotion": "煽风",
+          "line": "师父，他要和你分行李哩。"
+        },
+        {
+          "no": 16,
+          "type": "dialogue",
+          "speaker": "唐僧",
+          "emotion": "闭眼",
+          "line": "你走吧，我留你不得了。"
+        },
+        {
+          "no": 17,
+          "type": "dialogue",
+          "speaker": "孙悟空",
+          "emotion": "抓住马鞍",
+          "line": "师父，弟子一路降妖，你莫赶我。"
+        },
+        {
+          "no": 18,
+          "type": "action",
+          "text": "孙悟空伏地不起，额头抵着泥土；唐僧睁眼看他，握紧的拳头慢慢松开，别过脸去。",
+          "closeup": false
+        }
+      ]
+    },
+    {
+      "id": "1-4",
+      "location": "白虎岭断崖前",
+      "time": "日",
+      "intExt": "外",
+      "characters": [
+        "孙悟空",
+        "唐僧",
+        "猪八戒",
+        "沙僧",
+        "老丈"
+      ],
+      "beats": [
+        {
+          "no": 1,
+          "type": "action",
+          "text": "断崖前，一个白发老丈拄杖而立，背驼得厉害，脚边放着一只空竹篮。",
+          "closeup": false
+        },
+        {
+          "no": 2,
+          "type": "dialogue",
+          "speaker": "老丈",
+          "emotion": "拄杖",
+          "line": "长老可见我妻女？她们的骸骨还在这坡上。"
+        },
+        {
+          "no": 3,
+          "type": "dialogue",
+          "speaker": "猪八戒",
+          "emotion": "后退",
+          "line": "师父，又来了一个，今日祸事临头了！"
+        },
+        {
+          "no": 4,
+          "type": "action",
+          "text": "孙悟空盯着老丈的脚——布鞋踩着碎石，却没有一点声音。",
+          "closeup": false
+        },
+        {
+          "no": 5,
+          "type": "dialogue",
+          "speaker": "孙悟空",
+          "emotion": "低喝",
+          "line": "土地山神，与我做个证见！"
+        },
+        {
+          "no": 6,
+          "type": "dialogue",
+          "speaker": "唐僧",
+          "emotion": "急喝",
+          "line": "悟空！你再行凶，我念二十遍！"
+        },
+        {
+          "no": 7,
+          "type": "dialogue",
+          "speaker": "孙悟空",
+          "emotion": "回望",
+          "line": "师父，你看好了，这一棒不冤。"
+        },
+        {
+          "no": 8,
+          "type": "action",
+          "text": "山神土地在云端显形，合掌低头；孙悟空不再多话，一棒打落。",
+          "closeup": false
+        },
+        {
+          "no": 9,
+          "type": "action",
+          "text": "老丈皮囊炸开，白烟散尽，一具白骨倒在乱石间，脊梁朝上。",
+          "closeup": false
+        },
+        {
+          "no": 10,
+          "type": "action",
+          "text": "白骨脊梁上有一片被利器刻过的骨面，刻痕深黑，字迹留待后期。",
+          "closeup": true
+        },
+        {
+          "no": 11,
+          "type": "action",
+          "text": "唐僧后退半步，扶住马鞍，喉头动了动。",
+          "closeup": false
+        },
+        {
+          "no": 12,
+          "type": "dialogue",
+          "speaker": "唐僧",
+          "emotion": "后退",
+          "line": "这……这真是妖骨？"
+        },
+        {
+          "no": 13,
+          "type": "dialogue",
+          "speaker": "猪八戒",
+          "emotion": "跺脚",
+          "line": "师父，他是怕你念咒，使法术伪造的！"
+        },
+        {
+          "no": 14,
+          "type": "dialogue",
+          "speaker": "孙悟空",
+          "emotion": "回首",
+          "line": "呆子，你再说一遍！"
+        },
+        {
+          "no": 15,
+          "type": "action",
+          "text": "唐僧从袖中取出黄纸，就着马鞍提笔。",
+          "closeup": false
+        },
+        {
+          "no": 16,
+          "type": "action",
+          "text": "写完，他把黄纸递过去，手背在抖。",
+          "closeup": false
+        },
+        {
+          "no": 17,
+          "type": "dialogue",
+          "speaker": "唐僧",
+          "emotion": "收笔",
+          "line": "孙悟空，你走吧，我不再是你师父。"
+        },
+        {
+          "no": 18,
+          "type": "action",
+          "text": "孙悟空接过贬书，跪下，四面向唐僧拜了四拜；起身时，眼角有泪。",
+          "closeup": false
+        },
+        {
+          "no": 19,
+          "type": "dialogue",
+          "speaker": "孙悟空",
+          "emotion": "跪下",
+          "line": "师父，弟子拜别了。"
+        },
+        {
+          "no": 20,
+          "type": "action",
+          "text": "他转向沙僧，按住沙僧的肩。",
+          "closeup": false
+        },
+        {
+          "no": 21,
+          "type": "dialogue",
+          "speaker": "沙僧",
+          "emotion": "低声",
+          "line": "大师兄，你放心。"
+        },
+        {
+          "no": 22,
+          "type": "action",
+          "text": "孙悟空腾云而起，回头望了一眼，山雾合拢。",
+          "closeup": false
+        },
+        {
+          "no": 23,
+          "type": "action",
+          "text": "唐僧翻身上马，八戒挑担，沙僧牵马，一行三人向西方走去。",
+          "closeup": false
+        }
+      ]
+    }
+  ],
+  "source": "三打白骨精-script.md"
+}

@@ -587,9 +587,10 @@ def compile_slices(sb: dict, assets: dict, scenes: dict | None) -> str:
     cut_seq = " / ".join(CUT_POINT_ZH.get(sl.get("cutPoint"), sl.get("cutPoint") or "?") for sl in slices)
     cont_seq = " / ".join(CONTINUITY_ZH.get(sl.get("continuity"), "?").split("（")[0] for sl in slices)
     dlg_stat = []
-    for sl in slices:
+    for i, sl in enumerate(slices, 1):
         n = slice_dialogue_chars(sl)
-        dlg_stat.append(f"切片 {sl['id'].split('-')[-1]} {'无台词' if n == 0 else f'{n} 字'}")
+        # 用全片序号而非场次内序号：多场戏时 S02-01 与 S01-01 不应都写成「切片 01」
+        dlg_stat.append(f"切片 {i:02d} {'无台词' if n == 0 else f'{n} 字'}")
 
     out = []
     out.append(f"# 《{title}》AI 成片切片 Prompt（{p['sliceSeconds']}s × {len(slices)}）\n")

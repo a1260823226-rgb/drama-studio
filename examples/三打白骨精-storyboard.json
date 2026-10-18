@@ -1,0 +1,459 @@
+{
+  "title": "三打白骨精",
+  "lang": "zh",
+  "aspectRatio": "9:16",
+  "params": {
+    "sliceSeconds": 15,
+    "minDialogueChars": 25,
+    "maxDialogueChars": 35,
+    "maxDialogueCharsIntense": 40,
+    "minActionUnits": 3,
+    "maxActionUnits": 5,
+    "maxChainDepth": 3,
+    "charsPerSecond": 4.5,
+    "actionSeconds": 2.5,
+    "durationTolerance": 0.3,
+    "fieldBrackets": false
+  },
+  "scenePlans": [
+    {
+      "sceneId": "1-1",
+      "location": "白虎岭古道",
+      "time": "日",
+      "intExt": "外",
+      "cast": ["孙悟空", "唐僧", "猪八戒", "沙僧", "白骨精"],
+      "dialogueLines": 3,
+      "dialogueChars": 62,
+      "actionBeats": 6,
+      "estimateSeconds": 28.8,
+      "suggestSlices": 2
+    },
+    {
+      "sceneId": "1-2",
+      "location": "白虎岭乱石坡",
+      "time": "日",
+      "intExt": "外",
+      "cast": ["孙悟空", "唐僧", "猪八戒", "沙僧", "村姑"],
+      "dialogueLines": 12,
+      "dialogueChars": 122,
+      "actionBeats": 11,
+      "estimateSeconds": 54.6,
+      "suggestSlices": 4
+    },
+    {
+      "sceneId": "1-3",
+      "location": "白虎岭枯松下",
+      "time": "日",
+      "intExt": "外",
+      "cast": ["孙悟空", "唐僧", "猪八戒", "沙僧", "老妪"],
+      "dialogueLines": 9,
+      "dialogueChars": 99,
+      "actionBeats": 9,
+      "estimateSeconds": 44.5,
+      "suggestSlices": 3
+    },
+    {
+      "sceneId": "1-4",
+      "location": "白虎岭断崖前",
+      "time": "日",
+      "intExt": "外",
+      "cast": ["孙悟空", "唐僧", "猪八戒", "沙僧", "老丈"],
+      "dialogueLines": 11,
+      "dialogueChars": 116,
+      "actionBeats": 12,
+      "estimateSeconds": 55.8,
+      "suggestSlices": 4
+    }
+  ],
+  "slices": [
+    {
+      "id": "S01-01",
+      "sceneId": "1-1",
+      "title": "雾锁白虎岭",
+      "seconds": 15,
+      "cutPoint": "scene-start",
+      "size": "全景",
+      "camera": "固定镜头",
+      "shotLanguage": "大全景定场，平视固定机位，石阶作纵深引导线，人物占画面下三分之一，山雾压住上缘留白，长镜头缓起。",
+      "setting": "白虎岭古道口，石阶向上没入雾里，雾中只露枯松的轮廓",
+      "actionUnits": [
+        "师徒四人沿青石阶上岭，孙悟空扛着金箍棒走在最前",
+        "唐僧牵马居中，猪八戒挑着行李一步一喘，沙僧持降妖宝杖殿后",
+        "唐僧勒住缰绳，按住腹部，脸色发白",
+        "山脊后，白骨精半边身子贴住岩壁，指骨抠进石缝",
+        "她的眼窝里透出一点绿光，盯住坡下那匹白马"
+      ],
+      "dialogue": [],
+      "characters": ["孙悟空", "唐僧", "猪八戒", "沙僧", "白骨精"],
+      "props": ["金箍棒"],
+      "entryState": "白虎岭古道口，山雾未散，师徒四人沿石阶上岭，孙悟空扛棒走在队首",
+      "exitState": "唐僧勒住缰绳按住腹部，队伍停在坡上，山雾压着枯松",
+      "continuity": "scene-start",
+      "status": "planned"
+    },
+    {
+      "id": "S01-02",
+      "sceneId": "1-1",
+      "title": "一张嘴支走一只猴",
+      "seconds": 15,
+      "cutPoint": "line-end",
+      "size": "中景",
+      "camera": "推镜",
+      "shotLanguage": "中景平视，机位略低于马背缓推，唐僧与猴王分置画面左右，马颈作前景压住下缘，收在云影没入雾中。",
+      "setting": "坡上停留处，唐僧扶鞍，悟空立于马侧",
+      "actionUnits": [
+        "唐僧松开缰绳，按住腹部，抬眼看悟空",
+        "孙悟空收棒抱拳应命，转身一纵，脚踏云头翻过山脊",
+        "猪八戒把担子撂在地上，靠着石头坐下，沙僧持杖四望"
+      ],
+      "dialogue": [
+        {
+          "speaker": "唐僧",
+          "emotion": "气息虚弱",
+          "line": "悟空，为师腹中饥饿，你去南山摘些桃子来。"
+        },
+        {
+          "speaker": "孙悟空",
+          "emotion": "抱拳",
+          "line": "师父稍等，弟子去去就回，八戒沙僧守好行李。"
+        }
+      ],
+      "characters": ["孙悟空", "唐僧", "猪八戒", "沙僧"],
+      "props": ["金箍棒"],
+      "entryState": "唐僧勒住缰绳按住腹部，队伍停在坡上，山雾压着枯松",
+      "exitState": "孙悟空的身影没入雾中，猪八戒坐在石上，沙僧持杖四望",
+      "continuity": "chain",
+      "status": "planned"
+    },
+    {
+      "id": "S01-03",
+      "sceneId": "1-1",
+      "title": "崖壁上的绿眼睛",
+      "seconds": 15,
+      "cutPoint": "emotional-pause",
+      "size": "特写",
+      "camera": "局部特写切换",
+      "shotLanguage": "特写仰拍，岩壁横线压在画面上缘，指骨与石缝占满前景，绿瞳特写接整片山雾拉远，切成静默。",
+      "setting": "山脊后的岩壁，坡下师徒停在原地，风把雾推上来",
+      "actionUnits": [
+        "白骨精侧身贴住石缝，肩胛在薄衣下支起棱角",
+        "她的指骨一节节抠进石缝，灰白长甲刮下石屑",
+        "眼窝里的绿光收成一点，视线越过崖口落在白马身上",
+        "嘴唇贴着岩壁开合，说完便缩回石后，长发垂在缝口"
+      ],
+      "dialogue": [
+        {
+          "speaker": "白骨精",
+          "emotion": "低声，指甲刮过岩石",
+          "line": "孙悟空走了，只剩这两个呆货看着行李，正好先变个皮囊试他一试。"
+        }
+      ],
+      "characters": ["白骨精"],
+      "props": [],
+      "entryState": "切：山脊后岩壁，白骨精侧身贴住石缝，坡下师徒停在原地",
+      "exitState": "白骨精缩回岩壁后，长发垂在石缝，山雾重新合拢",
+      "continuity": "cut",
+      "status": "planned"
+    },
+    {
+      "id": "S02-01",
+      "sceneId": "1-2",
+      "title": "提罐上坡的女子",
+      "seconds": 15,
+      "cutPoint": "entrance",
+      "size": "全景",
+      "camera": "横移",
+      "shotLanguage": "全景横移，机位与坡口齐平，女子自画面右下入画走向平石，灰白巨石作前景遮挡，落幅三人一线。",
+      "setting": "乱石坡坡口，雾散了一半，平石上放着行李",
+      "actionUnits": [
+        "坡下传来环佩声，青衣女子提着青砂罐、拎着绿磁瓶一步步上来",
+        "猪八戒放下钉耙，抹了把脸迎上去，替她接过罐子",
+        "唐僧合掌问话，目光却落在她脚上——绣鞋干净，鞋底没有半点泥"
+      ],
+      "dialogue": [
+        { "speaker": "猪八戒", "emotion": "眼睛发直", "line": "女菩萨，青罐里提的是什么？" },
+        { "speaker": "村姑", "emotion": "福身一礼", "line": "长老，这是给田中丈夫送的斋饭。" },
+        { "speaker": "唐僧", "emotion": "合掌", "line": "女施主从何处来？" }
+      ],
+      "characters": ["唐僧", "猪八戒", "沙僧", "村姑"],
+      "props": ["青砂罐与绿磁瓶"],
+      "entryState": "乱石坡坡口，雾散了一半，唐僧师徒停在平石前，坡下传来环佩声",
+      "exitState": "女子站在平石前，青砂罐已到猪八戒手里，唐僧目光落在她的绣鞋上",
+      "continuity": "reanchor",
+      "reanchorFrom": ["C02", "C03", "C04", "C06", "S02"],
+      "status": "planned"
+    },
+    {
+      "id": "S02-02",
+      "sceneId": "1-2",
+      "title": "编出来的家世",
+      "seconds": 15,
+      "cutPoint": "line-end",
+      "size": "中近景",
+      "camera": "推镜",
+      "shotLanguage": "中近景侧机位缓推，唐僧与女子隔平石对置，浅景深虚掉八戒的脸，推至罐口特写时切走。",
+      "setting": "平石两侧，日光落在石面上，罐子搁在八戒脚边",
+      "actionUnits": [
+        "唐僧眉心锁起，往前半步，把马缰绕在手上",
+        "女子垂眼答话，指尖绞住衣角，绞得指节发白",
+        "猪八戒抢过话头，一手掀开罐盖，热气腾起"
+      ],
+      "dialogue": [
+        { "speaker": "唐僧", "emotion": "压低声", "line": "山深路险，怎好独自送饭？" },
+        { "speaker": "村姑", "emotion": "垂眼", "line": "就住山脚，父母在堂，丈夫田间劳作。" },
+        { "speaker": "猪八戒", "emotion": "抢话", "line": "师父，人家一片好心，用斋吧。" }
+      ],
+      "characters": ["唐僧", "猪八戒", "沙僧", "村姑"],
+      "props": ["青砂罐与绿磁瓶"],
+      "entryState": "女子站在平石前，青砂罐已到猪八戒手里，唐僧目光落在她的绣鞋上",
+      "exitState": "猪八戒揭开罐盖，热气腾起，唐僧合掌欲谢",
+      "continuity": "chain",
+      "status": "planned"
+    },
+    {
+      "id": "S02-03",
+      "sceneId": "1-2",
+      "title": "一打·举棒",
+      "seconds": 15,
+      "cutPoint": "action-turn",
+      "size": "全景",
+      "camera": "手持",
+      "shotLanguage": "全景手持跟拍，机位随落势下沉，棒影自画上劈下，白烟占满中景，硬切留在女尸上。",
+      "setting": "乱石坡，日光从雾里透下来，平石上的罐子还在冒热气",
+      "actionUnits": [
+        "天上一声风响，孙悟空拎着一枝桃子落在平石上，金睛一缩，厉声断喝",
+        "女子惊叫后退，唐僧急喝住手，金箍棒已经举过头顶",
+        "一棒打下，女子身形散作白烟退到石后，原地只留一具青布衣裳的女尸"
+      ],
+      "dialogue": [
+        { "speaker": "孙悟空", "emotion": "厉声", "line": "师父，那女子是妖精变的，莫吃她的饭！" },
+        { "speaker": "村姑", "emotion": "惊叫", "line": "长老救我！" },
+        { "speaker": "唐僧", "emotion": "急喝", "line": "悟空住手！莫要伤人！" }
+      ],
+      "characters": ["孙悟空", "唐僧", "猪八戒", "沙僧", "村姑"],
+      "props": ["金箍棒"],
+      "entryState": "猪八戒揭开罐盖，热气腾起，唐僧合掌欲谢",
+      "exitState": "金箍棒砸在空处，白烟散去，乱石间只剩一具青布衣裳的女尸",
+      "continuity": "chain",
+      "status": "planned"
+    },
+    {
+      "id": "S02-04",
+      "sceneId": "1-2",
+      "title": "一打·罐里的东西",
+      "seconds": 15,
+      "cutPoint": "emotional-pause",
+      "size": "特写",
+      "camera": "局部特写切换",
+      "shotLanguage": "特写局部切换，女尸、唐僧的眼、悟空的手三段交叉剪辑，浅景深锁住罐口，末帧定格在蛆虫上。",
+      "setting": "乱石间，女尸伏地，青砂罐翻倒在石缝边",
+      "actionUnits": [
+        "唐僧踉跄后退，抬手指着女尸，手指抖得对不准",
+        "猪八戒凑到他耳边压着嗓子说话，唐僧盘膝坐下闭眼念咒",
+        "孙悟空抱头翻滚，金箍勒进皮肉；伏地时反手一指，罐盖翻开，长蛆与蛤蟆涌出来"
+      ],
+      "dialogue": [
+        { "speaker": "唐僧", "emotion": "发抖", "line": "你这泼猴，平白打死好人！" },
+        { "speaker": "猪八戒", "emotion": "撇嘴", "line": "师父，他用障眼法哄你呢。" },
+        { "speaker": "孙悟空", "emotion": "抱头", "line": "师父莫念，那真是妖精！" }
+      ],
+      "characters": ["唐僧", "孙悟空", "猪八戒"],
+      "props": ["青砂罐与绿磁瓶", "金箍棒"],
+      "entryState": "切：乱石间女尸伏地，青砂罐翻倒在石缝边",
+      "exitState": "罐口涌出长蛆与蛤蟆，唐僧掩口后退，悟空伏在地上喘息",
+      "continuity": "cut",
+      "status": "planned"
+    },
+    {
+      "id": "S03-01",
+      "sceneId": "1-3",
+      "title": "枯松下的哭声",
+      "seconds": 15,
+      "cutPoint": "entrance",
+      "size": "全景",
+      "camera": "跟拍",
+      "shotLanguage": "全景跟拍，机位随老妪上坡缓慢抬升，半死巨松作左侧框景，三人被压到画面右缘。",
+      "setting": "枯松坡道，松针铺地，巨松把日光切成明暗两半",
+      "actionUnits": [
+        "哭声从松影里出来，白发老妪拄着竹杖，一步一颤地爬上坡来",
+        "猪八戒腿一软，抓着钉耙往后退，退到马肚子后面",
+        "唐僧脸色发白，扶着马鞍往前走了一步"
+      ],
+      "dialogue": [
+        { "speaker": "老妪", "emotion": "哭喊", "line": "我的女儿啊，你往哪里去了？" },
+        { "speaker": "猪八戒", "emotion": "腿软", "line": "师父，祸事了，那是死者的娘来了！" },
+        { "speaker": "唐僧", "emotion": "脸色发白", "line": "老人家，你女儿往哪边去了？" }
+      ],
+      "characters": ["唐僧", "猪八戒", "沙僧", "老妪"],
+      "props": [],
+      "entryState": "枯松坡道下，哭声由远及近，师徒三人停在坡口",
+      "exitState": "老妪停在枯松下，抬起脸，目光钉在唐僧身上",
+      "continuity": "reanchor",
+      "reanchorFrom": ["C02", "C03", "C07", "S03"],
+      "status": "planned"
+    },
+    {
+      "id": "S03-02",
+      "sceneId": "1-3",
+      "title": "二打·八十老妇",
+      "seconds": 15,
+      "cutPoint": "action-turn",
+      "size": "中近景",
+      "camera": "推镜",
+      "shotLanguage": "中近景推镜，机位自唐僧肩后绕到侧面，棍影斜切画面，收在老妪袖口的白骨长甲特写。",
+      "setting": "枯松阴影里，松针被脚步压出浅坑，竹杖斜插在地上",
+      "actionUnits": [
+        "孙悟空上前一步，把唐僧挡在身后，鼻翼一动，眼底金光爆开",
+        "老妪袖口滑落，露出白骨色的长甲，竹杖横在身前",
+        "一棒再击，风声压过哭声，老妪身子一软，白烟从她背后抽走"
+      ],
+      "dialogue": [
+        { "speaker": "孙悟空", "emotion": "冷笑", "line": "八十老妇，岂能生十八之女？" },
+        { "speaker": "老妪", "emotion": "颤声", "line": "长老，我女儿就死在这坡上。" },
+        { "speaker": "孙悟空", "emotion": "上前一步", "line": "你且站住，让我看看你的脸。" }
+      ],
+      "characters": ["孙悟空", "唐僧", "猪八戒", "老妪"],
+      "props": ["金箍棒"],
+      "entryState": "老妪停在枯松下，抬起脸，目光钉在唐僧身上",
+      "exitState": "竹杖落地，坡上留下一具老妇尸身，白烟钻进枯松后",
+      "continuity": "chain",
+      "status": "planned"
+    },
+    {
+      "id": "S03-03",
+      "sceneId": "1-3",
+      "title": "二十遍紧箍咒",
+      "seconds": 15,
+      "cutPoint": "line-end",
+      "size": "中景",
+      "camera": "环绕",
+      "shotLanguage": "中景环绕，机位绕悟空转半圈，唐僧背影占前景、悟空伏地占后景，咒声压过翻滚。",
+      "setting": "枯松坡道，白马惊得后退，松针被踩得乱飞",
+      "actionUnits": [
+        "唐僧惊骇坠马，被沙僧一把扶住",
+        "唐僧推开沙僧，盘坐念咒；孙悟空满地翻滚，抓碎了身下石块",
+        "猪八戒凑近进谗；唐僧别过脸，悟空抓住马鞍磕头，唐僧握拳的手慢慢松开"
+      ],
+      "dialogue": [
+        { "speaker": "猪八戒", "emotion": "煽风", "line": "师父，他要和你分行李哩。" },
+        { "speaker": "唐僧", "emotion": "闭眼", "line": "你走吧，我留你不得了。" },
+        { "speaker": "孙悟空", "emotion": "抓住马鞍", "line": "师父，弟子一路降妖，你莫赶我。" }
+      ],
+      "characters": ["孙悟空", "唐僧", "猪八戒", "沙僧"],
+      "props": [],
+      "entryState": "竹杖落地，坡上留下一具老妇尸身，白烟钻进枯松后",
+      "exitState": "悟空伏地不起，唐僧别过脸，握拳的手慢慢松开",
+      "continuity": "chain",
+      "status": "planned"
+    },
+    {
+      "id": "S04-01",
+      "sceneId": "1-4",
+      "title": "空竹篮",
+      "seconds": 15,
+      "cutPoint": "entrance",
+      "size": "全景",
+      "camera": "拉镜",
+      "shotLanguage": "全景拉镜，机位自老丈背影往后拉开，露出整片乱石平地，三人退到画面边缘，崖壁作右侧框。",
+      "setting": "崖前空地上，风把雾抽成一条横线，碎石被刮得干净",
+      "actionUnits": [
+        "白发老丈拄杖而立，背驼得厉害，脚边放着一只空竹篮",
+        "猪八戒往后退，钉耙横在身前，退到唐僧马后",
+        "孙悟空盯着老丈的脚——布鞋踩着碎石，却没有一点声音"
+      ],
+      "dialogue": [
+        { "speaker": "老丈", "emotion": "拄杖", "line": "长老可见我妻女？她们的骸骨还在这坡上。" },
+        { "speaker": "猪八戒", "emotion": "后退", "line": "师父，又来了一个，今日祸事临头了！" }
+      ],
+      "characters": ["唐僧", "猪八戒", "沙僧", "老丈"],
+      "props": [],
+      "entryState": "断崖前乱石平地，风穿过崖口，师徒三人停在崖下",
+      "exitState": "老丈拄杖站在崖前，悟空的目光落在他沾满干泥的布鞋上",
+      "continuity": "reanchor",
+      "reanchorFrom": ["C01", "C02", "C08", "S04"],
+      "status": "planned"
+    },
+    {
+      "id": "S04-02",
+      "sceneId": "1-4",
+      "title": "三打·请山神作证",
+      "seconds": 15,
+      "cutPoint": "action-turn",
+      "size": "中近景",
+      "camera": "手持",
+      "shotLanguage": "中近景手持仰拍，机位压低让悟空压住画面上缘，崖口天光作背景，一棒落定即硬切。",
+      "setting": "断崖前，悟空横棒当胸，唐僧在他身后举起手",
+      "actionUnits": [
+        "孙悟空把金箍棒往地上一顿，低声喝令土地山神",
+        "崖口雾里浮出两团模糊的影子，雾中合掌的轮廓一现即隐",
+        "孙悟空不再多话，一棒打落，老丈皮囊炸开，白烟散尽"
+      ],
+      "dialogue": [
+        { "speaker": "孙悟空", "emotion": "低喝", "line": "土地山神，与我做个证见！" },
+        { "speaker": "唐僧", "emotion": "急喝", "line": "悟空！你再行凶，我念二十遍！" },
+        { "speaker": "孙悟空", "emotion": "回望", "line": "师父，你看好了，这一棒不冤。" }
+      ],
+      "characters": ["孙悟空", "唐僧", "猪八戒", "老丈"],
+      "props": ["金箍棒"],
+      "entryState": "老丈拄杖站在崖前，悟空的目光落在他沾满干泥的布鞋上",
+      "exitState": "白烟散尽，一具白骨倒在乱石间，脊梁朝上",
+      "continuity": "chain",
+      "status": "planned"
+    },
+    {
+      "id": "S04-03",
+      "sceneId": "1-4",
+      "title": "骨面上的刻痕",
+      "seconds": 15,
+      "cutPoint": "emotional-pause",
+      "size": "特写",
+      "camera": "局部特写切换",
+      "shotLanguage": "特写局部切换，骨面刻痕接唐僧后退的脚，再接八戒跺地的鞋尖，三段跳切，末帧停在骨面上。",
+      "setting": "乱石间白骨横陈，风从崖口灌下来",
+      "actionUnits": [
+        "骨面上有一片被利器刻过的痕迹，刻痕深黑，嵌着泥",
+        "唐僧后退半步，扶住马鞍，喉头动了动",
+        "猪八戒跺脚凑上前，孙悟空回头攥紧棒子"
+      ],
+      "dialogue": [
+        { "speaker": "唐僧", "emotion": "后退", "line": "这……这真是妖骨？" },
+        { "speaker": "猪八戒", "emotion": "跺脚", "line": "师父，他是怕你念咒，使法术伪造的！" },
+        { "speaker": "孙悟空", "emotion": "回首", "line": "呆子，你再说一遍！" }
+      ],
+      "characters": ["孙悟空", "唐僧", "猪八戒"],
+      "props": ["白骨遗骸", "金箍棒"],
+      "entryState": "白烟散尽，一具白骨倒在乱石间，脊梁朝上",
+      "exitState": "唐僧从袖中取出黄纸，就着马鞍提笔，手背发抖",
+      "continuity": "chain",
+      "status": "planned"
+    },
+    {
+      "id": "S04-04",
+      "sceneId": "1-4",
+      "title": "一纸贬书",
+      "seconds": 15,
+      "cutPoint": "exit",
+      "size": "中景",
+      "camera": "固定镜头",
+      "shotLanguage": "中景固定机位，平视，悟空跪于画面左侧、唐僧立于右侧，山雾自画右合拢，定格在云影上。",
+      "setting": "断崖前，黄纸递出，山雾从崖口漫上来",
+      "actionUnits": [
+        "唐僧写完，把黄纸递过去，手背还在抖",
+        "孙悟空接过贬书，跪下，四面向唐僧拜了四拜，起身时眼角有泪",
+        "他转向沙僧，按住沙僧的肩；随后腾云而起，回头望了一眼，山雾合拢"
+      ],
+      "dialogue": [
+        { "speaker": "唐僧", "emotion": "收笔", "line": "孙悟空，你走吧，我不再是你师父。" },
+        { "speaker": "孙悟空", "emotion": "跪下", "line": "师父，弟子拜别了。" },
+        { "speaker": "沙僧", "emotion": "低声", "line": "大师兄，你放心。" }
+      ],
+      "characters": ["唐僧", "孙悟空", "沙僧", "猪八戒"],
+      "props": ["贬书"],
+      "entryState": "唐僧立于马鞍旁，手中黄纸墨迹未干，悟空跪在乱石上",
+      "exitState": "悟空的身影没入山雾，唐僧翻身上马，一行三人向西方走去",
+      "continuity": "reanchor",
+      "reanchorFrom": ["C01", "C02", "C04", "S04"],
+      "status": "planned"
+    }
+  ]
+}
