@@ -18,6 +18,8 @@ metadata:
 
 # drama-studio · 短剧工坊
 
+中文 · [English](SKILL.en.md) ｜ 英文镜像：`SKILL.en.md` · `README.en.md` · `references/en/`
+
 把短剧制作当成一条**连续生产线**，而不是一堆提示词。
 本 Skill 吃**分场剧本**，吐**可直接复制的 15 秒切片 Prompt**，中间用质量门把每一步焊死。
 
@@ -176,10 +178,12 @@ slug <名字>                                                  安全文件名
 
 所有命令默认打印到 stdout，可重定向落盘；`--out` 直接写文件。脚本路径一律写 `{baseDir}/scripts/drama_studio.py`，本 skill 自包含、可单独拷走。
 
+本文档的中文版为主文档；`references/en/` 与 `references/` 一一对应，`selftest.py` 会检查镜像缺失。
+
 ## 自测与示例
 
 ```bash
-python {baseDir}/scripts/selftest.py     # 100 项断言，不调模型不花额度，约 1 秒
+python {baseDir}/scripts/selftest.py     # 104 项断言，不调模型不花额度，约 1 秒
 ```
 
 `examples/青叶大学-*` 是一整套跑通的样例（剧本 → scenes → assets → storyboard → slices → report），同时是自测夹具。改动脚本后先跑自测。

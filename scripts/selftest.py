@@ -407,4 +407,12 @@ gates, _ = ds.validate_assets(after, SCENES)
 ok(all(g["ok"] for g in gates), "build-sheets 组装后的资产册全部门通过")
 tmp_a.unlink()
 
+# ---------------- 中英镜像一致性 ----------------
+for zh, en in [("SKILL.md", "SKILL.en.md"), ("README.md", "README.en.md")]:
+    ok((BASE / zh).exists() and (BASE / en).exists(), f"{zh} 与 {en} 成对存在")
+zh_refs = {p.name for p in (BASE / "references").glob("*.md")}
+en_refs = {p.name for p in (BASE / "references" / "en").glob("*.md")}
+eq(zh_refs, en_refs, "references/ 与 references/en/ 文件名一一对应")
+ok(bool(zh_refs), "中文参考非空")
+
 print(f"自测通过：{passed} 项断言")
