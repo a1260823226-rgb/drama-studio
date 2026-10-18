@@ -179,7 +179,7 @@ All commands print to stdout by default (shell-redirect to persist); `--out` wri
 ## Self-test and examples
 
 ```bash
-python {baseDir}/scripts/selftest.py     # 104 assertions, no model calls, no quota, ~1 second
+python {baseDir}/scripts/selftest.py     # 106 assertions, no model calls, no quota, ~1 second
 ```
 
 `examples/三打白骨精-*` is a complete worked sample (script → scenes → assets → storyboard → slices → report) and doubles as the self-test fixture. After changing any script, run the self-test first.

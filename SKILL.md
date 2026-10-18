@@ -183,7 +183,7 @@ slug <名字>                                                  安全文件名
 ## 自测与示例
 
 ```bash
-python {baseDir}/scripts/selftest.py     # 104 项断言，不调模型不花额度，约 1 秒
+python {baseDir}/scripts/selftest.py     # 106 项断言，不调模型不花额度，约 1 秒
 ```
 
 `examples/三打白骨精-*` 是一整套跑通的样例（剧本 → scenes → assets → storyboard → slices → report），同时是自测夹具。改动脚本后先跑自测。

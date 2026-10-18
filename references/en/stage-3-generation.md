@@ -36,7 +36,7 @@ The anatomy of one slice prompt:
 Compilation discipline:
 
 - **The template header is verbatim-immutable; field order never moves**; size/camera carry no `【】` by default (to add them: `params.fieldBrackets = true`).
-- `@UUID` is platform parser syntax: **never rewrite as `[UUID]` or `@凛生`** — a wrong form silently drops the binding.
+- `@UUID` is platform parser syntax: **never rewrite as `[UUID]` or `@孙悟空`** — a wrong form silently drops the binding.
 - **Shot language** sits between camera and visual content: size tier / camera position / move / composition / edit relation — one line stating this slice's visual intent (how to write it: `stage-2-storyboard.md`).
 - Dialogue `{}` blocks are verbatim from the script; dialogue-free slices carry no `{}` blocks.
 - Visual content = setting + 3-5 action units, deterministically assembled from `actionUnits`.
@@ -92,4 +92,4 @@ After downloading the real footage, extract frames (head / 25% / 50% / 75% / tai
 - Load each slice's **accepted range** (not the whole generation) into the timeline; generated duration ≠ cut duration.
 - Split tracks: dialogue / ambience / SFX / music; unify loudness; J/L-cut bridges across sound seams.
 - Captions, covers, and text layers are post-production overlays; before delivery, run the technical gates (resolution, loudness, duration, naming).
-- Naming: `project_slice_version_ratio_status`, e.g. `青叶_S01-02_v2_9x16_accepted.mp4`.
+- Naming: `project_slice_version_ratio_status`, e.g. `三打_S06_v2_9x16_accepted.mp4`.
