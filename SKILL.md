@@ -18,7 +18,7 @@ metadata:
 
 # drama-studio · 短剧工坊
 
-中文 · [English](SKILL.en.md) ｜ 英文镜像：`SKILL.en.md` · `README.en.md` · `references/en/`
+中文 · [English](SKILL.en.md) ｜ 文档双语：`README.md`（英文·仓库默认）/ `README.zh.md`（中文）；`SKILL.en.md` 与 `references/en/` 为英文镜像
 
 把短剧制作当成一条**连续生产线**，而不是一堆提示词。
 本 Skill 吃**分场剧本**，吐**可直接复制的 15 秒切片 Prompt**，中间用质量门把每一步焊死。

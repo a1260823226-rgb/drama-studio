@@ -1,92 +1,96 @@
 <div align="center">
 
-# drama-studio · 短剧工坊
+<picture>
+  <img alt="drama-studio — the short-drama production pipeline, from scene script to 15-second AI video slices" src="assets/pipeline-en.png" width="100%">
+</picture>
 
-**把一段分场剧本，做成可直接投喂 AI 视频生成的 15 秒切片 Prompt 生产包。**
+# drama-studio · Short-Drama Studio
+
+**Turn a scene-based script into a production pack of 15-second slice prompts, ready to feed an AI video model.**
 
 [![Version](https://img.shields.io/badge/version-1.0.0-6D5DF6?style=flat-square&labelColor=1E1B2E)](#)
-[![Quality gates](https://img.shields.io/badge/gates-26-8B7CF6?style=flat-square&labelColor=1E1B2E)](#硬约束全部由质量门强制执行)
-[![Self-test](https://img.shields.io/badge/selftest-104%20assertions-22C55E?style=flat-square&labelColor=1E1B2E)](#安装为-agent-skill)
+[![Quality gates](https://img.shields.io/badge/gates-26-8B7CF6?style=flat-square&labelColor=1E1B2E)](#hard-constraints-enforced-by-code)
+[![Self-test](https://img.shields.io/badge/selftest-104%20assertions-22C55E?style=flat-square&labelColor=1E1B2E)](#install-as-an-agent-skill)
 [![License](https://img.shields.io/badge/license-MIT-6B7280?style=flat-square&labelColor=1E1B2E)](LICENSE)
 
-[开始这里](#开始这里) · [三个阶段](#为什么是这三个阶段) · [硬约束](#硬约束全部由质量门强制执行) · [一分钟上手](#一分钟上手) · [安装](#安装为-agent-skill)
+[Start here](#start-here) · [Three stages](#why-these-three-stages) · [Hard constraints](#hard-constraints-enforced-by-code) · [Quick start](#one-minute-quick-start) · [Install](#install-as-an-agent-skill)
 
-[English](README.en.md) · 中文
+English · [中文](README.zh.md)
 
 </div>
 
-Updated: **2026-10-18** · **v1.0.0** · 中文为主文档；英文镜像见 [`README.en.md`](README.en.md) · [`SKILL.en.md`](SKILL.en.md) · [`references/en/`](references/en/)
+Updated: **2026-10-18** · **v1.0.0** · English is the default documentation; the Chinese edition lives at [`README.zh.md`](README.zh.md), with `SKILL.md` (Chinese) / [`SKILL.en.md`](SKILL.en.md) as the agent entry and [`references/en/`](references/en/) mirroring the Chinese references.
 
-三个阶段一条线，每步都有代码质量门把守：
+One pipeline, three stages, every step guarded by code-level quality gates:
 
 ```
-分场剧本 ──▶ 资产（角色四视图 / 场景空镜 + @UUID）──▶ 分镜（15s 切片 + 镜头语言 + 连续性链）──▶ AI 成片（固定模板 Prompt + 四门验收）
+scene script ──▶ assets (character four-views / scene plates + @UUID) ──▶ storyboard (15s slices + shot language + continuity chain) ──▶ generation (fixed-template prompts + four-gate acceptance)
 ```
 
-不是提示词合集，是一条有状态、有验收标准、可修复的生产线。不绑定任何平台/API/模型——即梦、Seedance 或其他入口皆可，执行权在用户。
+Not a prompt collection — a stateful, verifiable, repairable production line. Not bound to any platform, API, or model: Dreamina, Seedance, or any other entry point works; execution stays in the user's hands.
 
-<a id="开始这里"></a>
+<a id="start-here"></a>
 
-## 开始这里
+## Start here
 
-| 你是谁 | 先打开 |
+| You are | Open first |
 |---|---|
-| 第一次接触 | 本页 → [一分钟上手](#一分钟上手) → `examples/青叶大学-*` 整套样例 |
-| Agent 集成者 | [`SKILL.md`](SKILL.md)（中文）/ [`SKILL.en.md`](SKILL.en.md)（英文）——三阶段工作流与命令速查 |
-| 要改切分规则 | [`references/stage-2-storyboard.md`](references/stage-2-storyboard.md)——六条切分律 + 镜头语言 |
-| 要改资产产出 | [`references/stage-1-assets.md`](references/stage-1-assets.md)——人物四视图、场景分层物件 |
-| 要改提示词编译 | [`references/stage-3-generation.md`](references/stage-3-generation.md)——模板解剖、四门验收、修复五判决 |
-| 要查某道门为什么响 | [`references/quality-gates.md`](references/quality-gates.md)——26 道门总表与病灶文案 |
+| New here | This page → [Quick start](#one-minute-quick-start) → the complete `examples/青叶大学-*` sample |
+| Agent integrator | [`SKILL.md`](SKILL.md) (Chinese) / [`SKILL.en.md`](SKILL.en.md) (English) — the three-stage workflow and command reference |
+| Changing slicing rules | [`references/stage-2-storyboard.md`](references/stage-2-storyboard.md) — the six slicing laws + shot language |
+| Changing asset output | [`references/stage-1-assets.md`](references/stage-1-assets.md) — character four-views, layered scene objects |
+| Changing prompt compilation | [`references/stage-3-generation.md`](references/stage-3-generation.md) — template anatomy, four acceptance gates, five repair verdicts |
+| Debugging a failing gate | [`references/quality-gates.md`](references/quality-gates.md) — all 26 gates and their diagnostic messages |
 
-## 为什么是这三个阶段
+## Why these three stages
 
-| 阶段 | 回答的问题 | 产出 |
+| Stage | Question it answers | Output |
 |---|---|---|
-| 1 资产 | 画面里的人是谁、地方是哪、手里拿的是什么？ | `assets.json`：外貌/服饰提示词 + 分层物件清单 + UUID + 参考图状态 |
-| 2 分镜 | 这 15 秒拍什么、谁在画面哪、镜头怎么说话、台词是哪几句？ | `storyboard.json`：切片 + 镜头语言 + 连续性链 |
-| 3 成片 | 喂给平台的 Prompt 长什么样、生成出来怎么验、坏了怎么修？ | `slices.md`：可直接复制的切片 Prompt |
+| 1 Assets | Who is on screen, where are we, what is in their hands? | `assets.json`: appearance/costume prompts + layered object lists + UUIDs + reference-image status |
+| 2 Storyboard | What happens in these 15 seconds, who stands where, how does the camera speak, which lines are said? | `storyboard.json`: slices + shot language + continuity chain |
+| 3 Generation | What does the platform-facing prompt look like, how is the take verified, how is a failure repaired? | `slices.md`: copy-paste-ready slice prompts |
 
-<a id="硬约束全部由质量门强制执行"></a>
+<a id="hard-constraints-enforced-by-code"></a>
 
-## 硬约束（全部由质量门强制执行）
+## Hard constraints (all enforced by quality gates)
 
-- 单切片恰好 **15 秒**；
-- 单切片台词 **25-35 汉字**（激烈对峙 ≤40），**逐字**来自剧本，不增不减不改；
-- 每切片 **3-5 个有效动作单元**，复杂冲突必须切开；
-- 断点只切在：单句台词结束 / 人物入场 / 人物离场 / 重大动作转折 / 情绪停顿；
-- **上一片结尾动作 = 下一片起始画面**（`continuity` 门硬查）；
-- 每切片一句**镜头语言**（景别层次/机位角度/运镜方式/构图/组接，≤80 字）；
-- 链式衔接深度 ≤3，超了从角色/场景母版重新锚定；
-- 人物/场景一律 `@UUID` 绑定参考图，文本只写增量；
-- 模板头逐字不可改，字段顺序不可动。
+- Each slice is exactly **15 seconds**;
+- Each slice carries **25-35 Chinese characters** of dialogue (max 40 for intense confrontation), **verbatim** from the script — not added, not dropped, not reworded;
+- Each slice holds **3-5 effective action units**; complex conflicts must be split;
+- Cuts land only on: end of a line / entrance / exit / major action turn / emotional pause;
+- **The previous slice's ending action is the next slice's opening frame** (hard-checked by the `continuity` gate);
+- Each slice carries one line of **shot language** (size tier / camera position / move / composition / edit relation, ≤80 chars);
+- Chain depth ≤3; beyond that, re-anchor from the character/scene masters;
+- Characters and scenes are always bound via `@UUID` references; text carries only the increment;
+- The template header is verbatim-immutable; field order never moves.
 
-<a id="一分钟上手"></a>
+<a id="one-minute-quick-start"></a>
 
-## 一分钟上手
+## One-minute quick start
 
 ```bash
-# 1. 解析剧本（严格格式，见 references/script-format.md）
-python scripts/drama_studio.py parse-script 项目-script.md --title 项目 --out 项目-scenes.json
+# 1. Parse the script (strict format, see references/script-format.md)
+python scripts/drama_studio.py parse-script project-script.md --title Project --out project-scenes.json
 
-# 2. 生成资产骨架，补全后校验（参考图出完/上传后才算数）
-python scripts/drama_studio.py seed-assets 项目-scenes.json --out 项目-assets.json
-python scripts/drama_studio.py uuid-new 凛生 拓真 开太
-python scripts/drama_studio.py validate-assets 项目-assets.json --scenes 项目-scenes.json
-# 人物：造型师提示词填 appearance/costume → build-sheets 组装四视图提示词 → 出图上传
-python scripts/drama_studio.py build-sheets 项目-assets.json --apply
-# 场景：美术指导提示词填 objects 分层清单 → 手写空镜 sheetPrompt（含无可读文字）
+# 2. Seed the asset registry, fill it in, then validate (a reference image must exist first)
+python scripts/drama_studio.py seed-assets project-scenes.json --out project-assets.json
+python scripts/drama_studio.py uuid-new Rinsheng Takashi Kaita
+python scripts/drama_studio.py validate-assets project-assets.json --scenes project-scenes.json
+# Characters: stylist prompt fills appearance/costume → build-sheets assembles the four-view prompt → generate & upload
+python scripts/drama_studio.py build-sheets project-assets.json --apply
+# Scenes: art-director prompt fills the layered object list → hand-write the plate sheetPrompt (with the no-text clause)
 
-# 3. 分镜：按 references/stage-2-storyboard.md 填 slices，校验到全过
-python scripts/drama_studio.py seed-storyboard 项目-scenes.json --aspect 9:16 --out 项目-storyboard.json
-python scripts/drama_studio.py validate-storyboard 项目-storyboard.json --scenes 项目-scenes.json --assets 项目-assets.json
+# 3. Storyboard: fill slices per references/stage-2-storyboard.md, validate until every gate passes
+python scripts/drama_studio.py seed-storyboard project-scenes.json --aspect 9:16 --out project-storyboard.json
+python scripts/drama_studio.py validate-storyboard project-storyboard.json --scenes project-scenes.json --assets project-assets.json
 
-# 4. 编译切片 Prompt（门不过则拒绝编译）
-python scripts/drama_studio.py compile-slices 项目-storyboard.json --assets 项目-assets.json --scenes 项目-scenes.json --out 项目-slices.md
+# 4. Compile slice prompts (compilation is refused while any gate fails)
+python scripts/drama_studio.py compile-slices project-storyboard.json --assets project-assets.json --scenes project-scenes.json --out project-slices.md
 ```
 
-`examples/青叶大学-*` 是一整套跑通的样例（剧本 → 资产 → 5 个切片 → slices.md → 报告），从那儿抄最快。
+`examples/青叶大学-*` is a complete worked sample (script → assets → 5 slices → slices.md → report). Copying from it is the fastest way in.
 
-## 样例切片长这样
+## A compiled slice looks like this
 
 ```text
 真实电影风格。无BGM。无字幕。风格要求真实，镜头切换自然。
@@ -99,57 +103,62 @@ python scripts/drama_studio.py compile-slices 项目-storyboard.json --assets �
 {拓真（眼神充满占有欲）：听说裁判长前几天为难你了，你可是滑联的宝贝，她到底是因为什么对你动怒的？}
 ```
 
-<a id="安装为-agent-skill"></a>
+(The slice prompt template is Chinese-native by design — it is the working language of the target platforms. See [`assets/templates/slice-prompt.md`](assets/templates/slice-prompt.md).)
 
-## 安装为 Agent Skill
+<a id="install-as-an-agent-skill"></a>
+
+## Install as an Agent Skill
 
 ```bash
 # Claude Code
 cp -r drama-studio ~/.claude/skills/
-# Codex / 其他支持 SKILL.md 的客户端：拷入其 skills 目录，或直接让 Agent 读 SKILL.md
+# Codex / any SKILL.md-compatible client: copy into its skills directory, or let the agent read SKILL.md directly
 ```
 
-自包含、可单独拷走：只用 Python ≥3.8 标准库，不调模型、不花额度、可离线自测。
+Self-contained and copyable: Python ≥3.8 standard library only, no model calls, no quota, fully offline self-test.
 
 ```bash
-python scripts/selftest.py   # 104 项断言（含中英镜像一致性检查），约 1 秒
+python scripts/selftest.py   # 104 assertions (including bilingual-mirror consistency), ~1 second
 ```
 
-## 目录
+## Directory
 
 ```
 drama-studio/
-├── SKILL.md                 Agent 读的主入口（中文）
-├── SKILL.en.md              英文镜像
-├── README.md                本文档
-├── README.en.md             英文镜像
+├── README.md                This document (English, default)
+├── README.zh.md             Chinese edition
+├── SKILL.md                 Agent entry (Chinese)
+├── SKILL.en.md              Agent entry (English mirror)
 ├── scripts/
-│   ├── drama_studio.py      确定性工具（解析/种子化/校验/编译/渲染）
-│   └── selftest.py          自测（104 项断言，不调模型）
-├── references/              中文参考
-│   ├── script-format.md         输入剧本格式规范
-│   ├── stage-1-assets.md        资产阶段：人物四视图、场景分层物件、UUID 登记
-│   ├── stage-2-storyboard.md    分镜阶段：六条切分律与数据结构
-│   ├── stage-3-generation.md    成片阶段：编译、验收四门、修复五判决
-│   ├── quality-gates.md         26 道质量门总表与设计原则
-│   └── en/                      英文镜像（一一对应）
-├── assets/templates/       提示词模板与采集单（中文原生：提示词本身以中文交付）
-│   ├── character-extract.md      人物提取提示词（造型师）+ 四视图前缀
-│   ├── scene-extract.md          场景提取提示词（美术指导）+ 空镜写法
-│   ├── asset-intake.md           资产登记单（字段字典 + 流程）
-│   └── production-brief.md       生产简报
-└── examples/                   青叶大学整套样例（同时是自测夹具）
+│   ├── drama_studio.py      Deterministic tooling (parse / seed / validate / compile / render)
+│   └── selftest.py          Self-test (104 assertions, no model calls)
+├── references/              Chinese references
+│   ├── script-format.md         Input script format spec
+│   ├── stage-1-assets.md        Assets stage: four-views, layered objects, UUID registry
+│   ├── stage-2-storyboard.md    Storyboard stage: six slicing laws and data model
+│   ├── stage-3-generation.md    Generation stage: compilation, four gates, five verdicts
+│   ├── quality-gates.md         All 26 quality gates and design principles
+│   └── en/                      English mirrors (one-to-one)
+├── assets/
+│   ├── pipeline-en.png          Pipeline architecture diagram (English)
+│   ├── pipeline-zh.png          Pipeline architecture diagram (Chinese)
+│   └── templates/               Prompt templates and intake sheets (Chinese-native: the prompts themselves ship in Chinese)
+│       ├── character-extract.md      Character extraction prompt (stylist) + four-view prefix
+│       ├── scene-extract.md          Scene extraction prompt (art director) + plate style
+│       ├── asset-intake.md           Asset registry (field dictionary + workflow)
+│       └── production-brief.md       Production brief
+└── examples/                    Complete Aobaga University sample (doubles as the self-test fixture)
 ```
 
-> 语言约定：切片 Prompt、提取提示词、示例数据保持中文原生（它们的工作语言就是中文）；SKILL/README/references 三层提供中英双语，`references/en/` 与中文版一一对应，自测会检查镜像缺失。
+> Language convention: slice prompts, extraction prompts, and sample data stay Chinese-native (that is their working language); documentation ships bilingual — English is the default display (`README.md`, `SKILL.en.md`, `references/en/`), with Chinese at `README.zh.md`, `SKILL.md`, and `references/`. The self-test checks that the mirrors are complete.
 
-## 它向谁学了什么
+## What it learned from whom
 
-- **shuohao-skills**：JSON 单一事实源 + 脚本做校验渲染；`seed` 命令做上游确定性搬运；质量门代码化、逐条病灶；台词逐字门与覆盖门。
-- **dramake**：三态状态机（generated ≠ accepted，实测覆盖计划）；generation_block 事件负载预算；四道验收门与 P0 判定；一次只改一个变量 + 尝试预算；参考职责与不传递。
-- **seedance-2.0-os**：提示词是编译不是写作；身份保真度卸载给参考图；反 slop（不写空泛评价词）；重拍经济学（五判决 + shot log）；链深度上限与重新锚定；中英双语文档布局（英文镜像 + 徽章/锚点导航）。
-- **你的实战范式**：15 秒切片 Prompt（固定模板头、UUID 引用、25-35 汉字、3-5 动作单元、断点规则、上片结尾即下片开头）全部原样保留并写成门禁；资产产出采用你验证过的两条流水线——人物=造型师「外貌+服饰」双段提示词组装白底四视图（16:9），场景=美术指导分层物件清单（核心/环境/隐含）写成空镜提示词（含无可读文字约束）。
+- **shuohao-skills**: JSON as single source of truth + scripts for validation and rendering; `seed` commands for deterministic upstream transfer; code-level quality gates with per-item diagnostics; verbatim-dialogue and coverage gates.
+- **dramake**: three-state lifecycle (`generated ≠ accepted`, observed state overrides planned); generation-block event-load budgeting; four acceptance gates with P0 rulings; one-variable retries + attempt budgets; reference roles and must-not-transfer.
+- **seedance-2.0-os**: prompts are compiled, not written; identity fidelity offloaded to reference images; anti-slop (no empty evaluators); retake economics (five verdicts + shot log); chain-depth caps and re-anchoring; English-default documentation layout (hero image + badges + anchor navigation + language switcher).
+- **Your battle-tested patterns**: the 15-second slice prompt (fixed template header, UUID references, 25-35 characters, 3-5 action units, cut rules, previous-slice ending = next-slice opening) is preserved verbatim and encoded as gates; asset output uses your two proven pipelines — characters = stylist "appearance + costume" two-part prompt assembled into a white-background four-view sheet (16:9), scenes = art-director layered object list (core/environment/implied) written into a plate prompt (with the no-readable-text clause).
 
-## 许可
+## License
 
 [MIT](LICENSE)
